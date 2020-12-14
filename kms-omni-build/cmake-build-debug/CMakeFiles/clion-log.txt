@@ -1,0 +1,20 @@
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/tthwang/Projects/test/kms-omni-build
+-- CMake project: kms-omni-build
+-- CMake project: kms-cmake-utils
+-- No version info from git. Using default: 6.13.0
+-- Project version: kms-cmake-utils-6.13.0
+-- CMake project: kms-jsonrpc
+If KurentoHelpers is not found, you need to install 'kms-cmake-utils' from the Kurento repository
+-- No version info from git. Using default: 6.13.0
+-- Project version: kms-jsonrpc-6.13.0
+-- Checking for module 'kmsjsoncpp>=0.6.0'
+--   No package 'kmsjsoncpp' found
+CMake Error at /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.15/Modules/FindPkgConfig.cmake:458 (message):
+  A required package was not found
+Call Stack (most recent call first):
+  /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.15/Modules/FindPkgConfig.cmake:637 (_pkg_check_modules_internal)
+  kms-jsonrpc/CMakeLists.txt:25 (pkg_check_modules)
+
+
+-- Configuring incomplete, errors occurred!
+See also "/Users/tthwang/Projects/test/kms-omni-build/cmake-build-debug/CMakeFiles/CMakeOutput.log".

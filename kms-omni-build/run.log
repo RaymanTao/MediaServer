@@ -1,0 +1,201 @@
+[kms-build-run.sh] ==================== BEGIN ====================
+[kms-build-run.sh] CFG_BUILD_ONLY=false
+[kms-build-run.sh] CFG_RELEASE=true
+[kms-build-run.sh] CFG_GDB=false
+[kms-build-run.sh] CFG_CLANG=false
+[kms-build-run.sh] CFG_VERBOSE=false
+[kms-build-run.sh] CFG_VALGRIND_MEMCHECK=false
+[kms-build-run.sh] CFG_VALGRIND_MASSIF=false
+[kms-build-run.sh] CFG_ADDRESS_SANITIZER=false
+[kms-build-run.sh] CFG_THREAD_SANITIZER=false
+[kms-build-run.sh] CFG_UNDEFINED_SANITIZER=false
+~/kms-omni-build/build-RelWithDebInfo ~/kms-omni-build
+[  0%] Built target jsonrpc
+[  0%] Built target kmsrefstruct
+[  1%] Built target sdputils
+[  1%] Built target kmsutils
+[  7%] Built target kmssdpagent
+[  8%] Built target kurento-module-creator
+[ 26%] Built target kmscoreinterface
+[ 34%] Built target kmsgstcommons
+[ 36%] Built target kmscoreplugins
+[ 45%] Built target kmscoreimpl
+[ 47%] Built target kmscoremodule
+[ 48%] Built target vp8parse
+[ 59%] Built target kmselementsinterface
+[ 60%] Built target webrtcdataproto
+[ 62%] Built target rtcpdemux
+[ 65%] Built target kmswebrtcendpointlib
+[ 68%] Built target kmshttpep
+[ 74%] Built target kmselementsimpl
+[ 75%] Built target kmselementsmodule
+[ 76%] Built target recorderendpoint
+[ 79%] Built target rtpendpoint
+[ 80%] Built target webrtcendpoint
+[ 84%] Built target kmselementsplugins
+[ 85%] Built target kmstestutils
+[ 89%] Built target kmsfiltersinterface
+[ 91%] Built target kmsfiltersimpl
+[ 92%] Built target kmsfiltersmodule
+[ 93%] Built target facedetector
+[ 95%] Built target imageoverlay
+[ 95%] Built target faceoverlay
+[ 96%] Built target movementdetector
+[ 96%] Built target opencvfilter
+[ 96%] Built target logooverlay
+[ 96%] Built target kmsfilterstestutils
+[ 97%] Built target websocketTransport
+[ 97%] Built target transport
+[100%] Built target kurento-media-server
+[kms-build-run.sh] Run command:  GST_DEBUG='3,Kurento*:4,kms*:4,sdp*:4,webrtc*:4,*rtpendpoint:4,rtp*handler:4,rtpsynchronizer:4,agnosticbin:4'  kurento-media-server/server/kurento-media-server         --conf-file='/root/kms-omni-build/build-RelWithDebInfo/config/kurento.conf.json'         --modules-config-path='/root/kms-omni-build/build-RelWithDebInfo/config'         --modules-path='/root/kms-omni-build/build-RelWithDebInfo:/usr/lib/x86_64-linux-gnu/kurento/modules'         --gst-plugin-path='/root/kms-omni-build/build-RelWithDebInfo'
+0:00:00.030168831 [336m30131[00m 0x5585ba373ca0 [36mINFO   [00m [00mKurentoModuleManager ModuleManager.cpp:90:loadModule:[00m Load file: /root/kms-omni-build/build-RelWithDebInfo/kms-core/src/server/libkmscoremodule.so, module name: /root/kms-omni-build/build-RelWithDebInfo/kms-core/src/server/libkmscoremodule.so
+0:00:00.030227510 [336m30131[00m 0x5585ba373ca0 [36mINFO   [00m [00mKurentoModuleManager ModuleManager.cpp:137:loadModule:[00m Loaded module: core, version: 6.13.0, date: Jan  3 2020 08:57:12
+0:00:00.153245636 [336m30131[00m 0x5585ba373ca0 [36mINFO   [00m [00mKurentoModuleManager ModuleManager.cpp:90:loadModule:[00m Load file: /root/kms-omni-build/build-RelWithDebInfo/kms-filters/src/server/libkmsfiltersmodule.so, module name: /root/kms-omni-build/build-RelWithDebInfo/kms-filters/src/server/libkmsfiltersmodule.so
+0:00:00.153286530 [336m30131[00m 0x5585ba373ca0 [36mINFO   [00m [00mKurentoModuleManager ModuleManager.cpp:137:loadModule:[00m Loaded module: filters, version: 6.13.0, date: Jan  3 2020 09:00:48
+0:00:00.178844294 [336m30131[00m 0x5585ba373ca0 [36mINFO   [00m [00mKurentoModuleManager ModuleManager.cpp:90:loadModule:[00m Load file: /root/kms-omni-build/build-RelWithDebInfo/kms-elements/src/server/libkmselementsmodule.so, module name: /root/kms-omni-build/build-RelWithDebInfo/kms-elements/src/server/libkmselementsmodule.so
+0:00:00.178967278 [336m30131[00m 0x5585ba373ca0 [36mINFO   [00m [00mKurentoModuleManager ModuleManager.cpp:137:loadModule:[00m Loaded module: elements, version: 6.13.0, date: Jan  3 2020 08:59:44
+0:00:00.180121111 [336m30131[00m 0x5585ba373ca0 [36mINFO   [00m [00mKurentoModuleManager ModuleManager.cpp:162:loadModules:[00m Skip invalid path: /usr/local/lib/kurento/modules
+0:00:00.180214711 [336m30131[00m 0x5585ba373ca0 [36mINFO   [00m [00m  KurentoMediaServer main.cpp:240:main:[00m Kurento Media Server version: 6.13.0
+0:00:00.180232853 [336m30131[00m 0x5585ba373ca0 [36mINFO   [00m [00m   KurentoLoadConfig loadConfig.cpp:249:loadConfig:[00m Reading configuration from: /root/kms-omni-build/build-RelWithDebInfo/config/kurento.conf.json
+0:00:00.180546885 [336m30131[00m 0x5585ba373ca0 [36mINFO   [00m [00m   KurentoLoadConfig loadConfig.cpp:183:loadModulesConfigFromDir:[00m Looking for config files in /root/kms-omni-build/build-RelWithDebInfo/config
+0:00:00.180588965 [336m30131[00m 0x5585ba373ca0 [36mINFO   [00m [00m   KurentoLoadConfig loadConfig.cpp:183:loadModulesConfigFromDir:[00m Looking for config files in /root/kms-omni-build/build-RelWithDebInfo/config/kurento
+0:00:00.180736223 [336m30131[00m 0x5585ba373ca0 [36mINFO   [00m [00m   KurentoLoadConfig loadConfig.cpp:209:loadModulesConfigFromDir:[00m Loaded module config: /root/kms-omni-build/build-RelWithDebInfo/config/kurento/BaseRtpEndpoint.conf.ini
+0:00:00.180896769 [336m30131[00m 0x5585ba373ca0 [36mINFO   [00m [00m   KurentoLoadConfig loadConfig.cpp:209:loadModulesConfigFromDir:[00m Loaded module config: /root/kms-omni-build/build-RelWithDebInfo/config/kurento/SdpEndpoint.conf.json
+0:00:00.181033791 [336m30131[00m 0x5585ba373ca0 [36mINFO   [00m [00m   KurentoLoadConfig loadConfig.cpp:209:loadModulesConfigFromDir:[00m Loaded module config: /root/kms-omni-build/build-RelWithDebInfo/config/kurento/PlayerEndpoint.conf.ini
+0:00:00.181188383 [336m30131[00m 0x5585ba373ca0 [36mINFO   [00m [00m   KurentoLoadConfig loadConfig.cpp:209:loadModulesConfigFromDir:[00m Loaded module config: /root/kms-omni-build/build-RelWithDebInfo/config/kurento/MediaElement.conf.ini
+0:00:00.181298329 [336m30131[00m 0x5585ba373ca0 [36mINFO   [00m [00m   KurentoLoadConfig loadConfig.cpp:209:loadModulesConfigFromDir:[00m Loaded module config: /root/kms-omni-build/build-RelWithDebInfo/config/kurento/UriEndpoint.conf.ini
+0:00:00.181473699 [336m30131[00m 0x5585ba373ca0 [36mINFO   [00m [00m   KurentoLoadConfig loadConfig.cpp:209:loadModulesConfigFromDir:[00m Loaded module config: /root/kms-omni-build/build-RelWithDebInfo/config/kurento/WebRtcEndpoint.conf.ini
+0:00:00.181780213 [336m30131[00m 0x5585ba373ca0 [36mINFO   [00m [00m   KurentoLoadConfig loadConfig.cpp:209:loadModulesConfigFromDir:[00m Loaded module config: /root/kms-omni-build/build-RelWithDebInfo/config/kurento/HttpEndpoint.conf.ini
+0:00:00.182379416 [336m30131[00m 0x5585ba373ca0 [36mINFO   [00m [00m   KurentoLoadConfig loadConfig.cpp:209:loadModulesConfigFromDir:[00m Loaded module config: /root/kms-omni-build/build-RelWithDebInfo/config/kurento.conf.json
+0:00:00.182424433 [336m30131[00m 0x5585ba373ca0 [36mINFO   [00m [00m   KurentoLoadConfig loadConfig.cpp:265:loadConfig:[00m Configuration loaded successfully
+0:00:00.182510706 [336m30131[00m 0x5585ba373ca0 [36mINFO   [00m [00m   KurentoLoadConfig loadConfig.cpp:271:loadConfig:[00m Loaded config in effect:
+{
+    "mediaServer": {
+        "resources": {
+            "\/\/exceptionLimit": "0.8",
+            "\/\/killLimit": "0.7",
+            "garbageCollectorPeriod": "240",
+            "\/\/": "Whether to disable the RPC request cache, for memory constrained environments",
+            "disableRequestCache": "false"
+        },
+        "net": {
+            "websocket": {
+                "\/\/ipv6": "false",
+                "port": "8888",
+                "\/\/secure": {
+                    "\/\/port": "8433",
+                    "\/\/certificate": "defaultCertificate.pem",
+                    "\/\/password": ""
+                },
+                "\/\/registrar": {
+                    "\/\/address": "ws:\/\/localhost:9090",
+                    "\/\/localAddress": "localhost"
+                },
+                "\/\/": "Default SOMAXCONN (128)",
+                "\/\/connqueue": "128",
+                "path": "kurento",
+                "threads": "10"
+            }
+        }
+    },
+    "configPath": "\/root\/kms-omni-build\/build-RelWithDebInfo\/config",
+    "modules": {
+        "kurento": {
+            "BaseRtpEndpoint": {
+                "configPath": "\/root\/kms-omni-build\/build-RelWithDebInfo\/config\/kurento"
+            },
+            "SdpEndpoint": {
+                "numAudioMedias": "1",
+                "numVideoMedias": "1",
+                "audioCodecs": [
+                    {
+                        "name": "opus\/48000\/2",
+                        "\/\/": "Next is an example about how a codec can be configured.",
+                        "\/\/": "WARNING: Usage of properties is not yet supported",
+                        "\/\/properties": {
+                            "\/\/maxcodedaudiobandwidth": "16000",
+                            "\/\/maxaveragebitrate": "20000",
+                            "\/\/stereo": "1",
+                            "\/\/useinbandfec": "1",
+                            "\/\/usedtx": "0"
+                        }
+                    },
+                    {
+                        "name": "PCMU\/8000"
+                    },
+                    {
+                        "name": "AMR\/8000"
+                    }
+                ],
+                "videoCodecs": [
+                    {
+                        "name": "VP8\/90000"
+                    },
+                    {
+                        "name": "H264\/90000"
+                    }
+                ],
+                "configPath": "\/root\/kms-omni-build\/build-RelWithDebInfo\/config\/kurento"
+            },
+            "PlayerEndpoint": {
+                "configPath": "\/root\/kms-omni-build\/build-RelWithDebInfo\/config\/kurento"
+            },
+            "MediaElement": {
+                "configPath": "\/root\/kms-omni-build\/build-RelWithDebInfo\/config\/kurento"
+            },
+            "UriEndpoint": {
+                "defaultPath": "file:\/\/\/var\/lib\/kurento\/",
+                "configPath": "\/root\/kms-omni-build\/build-RelWithDebInfo\/config\/kurento"
+            },
+            "WebRtcEndpoint": {
+                "configPath": "\/root\/kms-omni-build\/build-RelWithDebInfo\/config\/kurento"
+            },
+            "HttpEndpoint": {
+                "serverAddress": "localhost",
+                "port": "9091",
+                "configPath": "\/root\/kms-omni-build\/build-RelWithDebInfo\/config\/kurento"
+            },
+            "mediaServer": {
+                "resources": {
+                    "\/\/exceptionLimit": "0.8",
+                    "\/\/killLimit": "0.7",
+                    "garbageCollectorPeriod": "240",
+                    "\/\/": "Whether to disable the RPC request cache, for memory constrained environments",
+                    "disableRequestCache": "false"
+                },
+                "net": {
+                    "websocket": {
+                        "\/\/ipv6": "false",
+                        "port": "8888",
+                        "\/\/secure": {
+                            "\/\/port": "8433",
+                            "\/\/certificate": "defaultCertificate.pem",
+                            "\/\/password": ""
+                        },
+                        "\/\/registrar": {
+                            "\/\/address": "ws:\/\/localhost:9090",
+                            "\/\/localAddress": "localhost"
+                        },
+                        "\/\/": "Default SOMAXCONN (128)",
+                        "\/\/connqueue": "128",
+                        "path": "kurento",
+                        "threads": "10"
+                    }
+                }
+            },
+            "configPath": "\/root\/kms-omni-build\/build-RelWithDebInfo\/config"
+        }
+    }
+}
+
+0:00:00.182626976 [336m30131[00m 0x5585ba373ca0 [36mINFO   [00m [00mKurentoServerMethods ServerMethods.cpp:90:ServerMethods:[00m Using above 80.00% of system limits will throw NOT_ENOUGH_RESOURCES exception
+0:00:00.182765587 [336m30131[00m 0x5585ba373ca0 [36mINFO   [00m [00mKurentoServerMethods ServerMethods.cpp:109:ServerMethods:[00m System limits: 7636 threads, 1024 files
+0:00:00.183258293 [336m30131[00m 0x5585ba373ca0 [36mINFO   [00m [00mKurentoServerMethods ServerMethods.cpp:144:ServerMethods:[00m RPC Request Cache is ENABLED
+0:00:00.183409778 [336m30131[00m 0x5585ba373ca0 [36mINFO   [00m [00mKurentoWebSocketTransport WebSocketTransport.cpp:152:WebSocketTransport:[00m WebSocket server listening on address '::', port 8888
+0:00:00.183426282 [336m30131[00m 0x5585ba373ca0 [36mINFO   [00m [00mKurentoWebSocketTransport WebSocketTransport.cpp:249:WebSocketTransport:[00m Secure websocket server not enabled
+0:00:00.183754897 [336m30131[00m 0x5585ba373ca0 [36mINFO   [00m [00m  KurentoMediaServer main.cpp:259:main:[00m Kurento Media Server started
+0:01:34.682028377 [336m30131[00m 0x5585ba373ca0 [36mINFO   [00m [00m     KurentoMediaSet MediaSet.cpp:111:deleteMediaSet:[00m Destroying mediaSet
+0:01:34.682769390 [336m30131[00m 0x5585ba373ca0 [36mINFO   [00m [00m  KurentoMediaServer main.cpp:266:main:[00m Kurento Media Server stopped
+~/kms-omni-build
+[kms-build-run.sh] SUCCESS
+[kms-build-run.sh] #################### END ####################

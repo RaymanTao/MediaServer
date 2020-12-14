@@ -1,0 +1,31 @@
+Source: ${nameScoreLower}
+Maintainer: Maintainer Name
+Priority: optional
+Build-Depends: debhelper (>= 9),
+ build-essential,
+ cmake,
+ pkg-config,
+ libopencv-dev,
+ kms-core-dev,
+ kms-elements-dev,
+ kms-filters-dev,
+Standards-Version: 4.0.0
+
+Package: ${nameScoreLower}
+Architecture: any
+Section: video
+Depends: ${shlibs:Depends},
+ ${misc:Depends}
+Description: Single line synopsis
+ Extended description over several lines
+
+Package: ${nameScoreLower}-dev
+Architecture: any
+Section: devel
+Depends: ${nameScoreLower} (= ${binary:Version}),
+ libopencv-dev,
+ kms-core-dev,
+ kms-elements-dev,
+ kms-filters-dev
+Description: Single line synopsis
+ Extended description over several lines - Development files

@@ -1,0 +1,1351 @@
+[kms-build-run.sh] ==================== BEGIN ====================
+[kms-build-run.sh] CFG_BUILD_ONLY=false
+[kms-build-run.sh] CFG_RELEASE=true
+[kms-build-run.sh] CFG_GDB=false
+[kms-build-run.sh] CFG_CLANG=false
+[kms-build-run.sh] CFG_VERBOSE=false
+[kms-build-run.sh] CFG_VALGRIND_MEMCHECK=false
+[kms-build-run.sh] CFG_VALGRIND_MASSIF=false
+[kms-build-run.sh] CFG_ADDRESS_SANITIZER=false
+[kms-build-run.sh] CFG_THREAD_SANITIZER=false
+[kms-build-run.sh] CFG_UNDEFINED_SANITIZER=false
+~/kms-omni-build/build-RelWithDebInfo ~/kms-omni-build
+[kms-build-run.sh] Run command:  CC='gcc' CXX='g++' cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_EXPORT_COMPILE_COMMANDS=ON  ..
+-- The C compiler identification is GNU 7.5.0
+-- The CXX compiler identification is GNU 7.5.0
+-- Check for working C compiler: /usr/bin/gcc
+-- Check for working C compiler: /usr/bin/gcc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/g++
+-- Check for working CXX compiler: /usr/bin/g++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- CMake project: kms-omni-build
+-- CMake project: kms-cmake-utils
+-- Found Git: /usr/bin/git (found version "2.17.1") 
+-- Version info from git: 6.13.0
+-- Project version: kms-cmake-utils-6.13.0
+-- CMake project: kms-jsonrpc
+If KurentoHelpers is not found, you need to install 'kms-cmake-utils' from the Kurento repository
+-- Found KurentoHelpers: 6.13.0 (found version "6.13.0") 
+-- Version info from git: 6.13.0
+-- Project version: kms-jsonrpc-6.13.0
+-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.1") 
+-- Checking for module 'kmsjsoncpp>=0.6.0'
+--   Found kmsjsoncpp, version 1.6.3-dev
+-- Boost version: 1.65.1
+-- Found the following Boost libraries:
+--   unit_test_framework
+-- Adding test: test_rpc
+-- Adding custom target: 'check_build'
+-- Adding custom target: 'check'
+-- Adding test: test_serialize
+-- Found /usr/bin/kurento-module-creator
+-- Found /usr/bin/kurento-module-creator
+-- Found KurentoModuleCreator: 6.13.1-SNAPSHOT (found version "6.13.1-SNAPSHOT") 
+-- Resolving KurentoModuleCreator version ^6.7.0 with 6.13.1-SNAPSHOT
+-- Try GNU SanitizerBlacklist flag = [-fsanitize-blacklist=/root/kms-omni-build/bin/sanitizers/blacklist.txt]
+-- Performing Test SanBlist_FLAG_DETECTED
+-- Performing Test SanBlist_FLAG_DETECTED - Failed
+CMake Warning at kms-cmake-utils/3rdparty/sanitizers-cmake/cmake/sanitize-helpers.cmake:150 (message):
+  SanitizerBlacklist is not available for GNU compiler.  Targets using this
+  compiler will be compiled without SanitizerBlacklist.
+Call Stack (most recent call first):
+  kms-cmake-utils/3rdparty/sanitizers-cmake/cmake/FindSanitizers.cmake:51 (sanitizer_check_compiler_flags)
+  CMakeLists.txt:94 (sanitizer_add_blacklist_file)
+
+
+-- CMake project: kms-core
+If KurentoHelpers is not found, you need to install 'kms-cmake-utils' from the Kurento repository
+-- KurentoModuleCreator Already found
+-- Version info from git: 6.13.0
+-- Project version: kms-core-6.13.0
+-- Performing Test HAS_WARNING_DATE_TIME
+-- Performing Test HAS_WARNING_DATE_TIME - Success
+-- Performing Test HAS_STD_REGEX_REPLACE
+-- Performing Test HAS_STD_REGEX_REPLACE - Success
+-- Boost version: 1.65.1
+-- Found the following Boost libraries:
+--   filesystem
+--   system
+--   unit_test_framework
+-- Found Boost COMPONENTS filesystem;system;unit_test_framework
+-- Checking for module 'gstreamer-1.5'
+--   Found gstreamer-1.5, version 1.8.1.1
+-- Resolving gstreamer-1.5 version ^1.7.1 with 1.8.1.1
+-- Checking for module 'gstreamer-base-1.5'
+--   Found gstreamer-base-1.5, version 1.8.1.1
+-- Resolving gstreamer-base-1.5 version ^1.7.1 with 1.8.1.1
+-- Checking for module 'gstreamer-video-1.5'
+--   Found gstreamer-video-1.5, version 1.8.1.1
+-- Resolving gstreamer-video-1.5 version ^1.7.1 with 1.8.1.1
+-- Checking for module 'gstreamer-check-1.5'
+--   Found gstreamer-check-1.5, version 1.8.1.1
+-- Resolving gstreamer-check-1.5 version ^1.7.1 with 1.8.1.1
+-- Checking for module 'gstreamer-sdp-1.5'
+--   Found gstreamer-sdp-1.5, version 1.8.1.1
+-- Resolving gstreamer-sdp-1.5 version ^1.7.1 with 1.8.1.1
+-- Checking for module 'gstreamer-pbutils-1.5'
+--   Found gstreamer-pbutils-1.5, version 1.8.1.1
+-- Resolving gstreamer-pbutils-1.5 version ^1.7.1 with 1.8.1.1
+-- Checking for module 'gstreamer-rtp-1.5'
+--   Found gstreamer-rtp-1.5, version 1.8.1.1
+-- Resolving gstreamer-rtp-1.5 version ^1.7.1 with 1.8.1.1
+-- Checking for module 'kmsjsoncpp>=0.6.0'
+--   Found kmsjsoncpp, version 1.6.3-dev
+-- Found KmsJsonRpc: 6.13.0 (found version "6.13.0") 
+-- Resolving KmsJsonRpc version ^6.7.0 with 6.13.0
+-- Checking for module 'sigc++-2.0'
+--   Found sigc++-2.0, version 2.10.0
+-- Resolving sigc++-2.0 version ^2.0.10 with 2.10.0
+-- Checking for module 'glibmm-2.4'
+--   Found glibmm-2.4, version 2.56.0
+-- Resolving glibmm-2.4 version ^2.37 with 2.56.0
+-- Checking for module 'uuid'
+--   Found uuid, version 2.31.1
+-- Found uuid
+-- Found LIBVPX: /usr/include  
+-- KurentoModuleCreator Already found
+-- Including generated cmake coreDependencies.cmake
+-- Generated: kmscore.pc.in
+-- Generated: MediaObjectImpl.hpp
+-- Generated: ServerManagerImpl.hpp
+-- Generated: SessionEndpointImpl.hpp
+-- Generated: HubImpl.hpp
+-- Generated: FilterImpl.hpp
+-- Generated: EndpointImpl.hpp
+-- Generated: HubPortImpl.hpp
+-- Generated: PassThroughImpl.hpp
+-- Generated: UriEndpointImpl.hpp
+-- Generated: MediaPipelineImpl.hpp
+-- Generated: SdpEndpointImpl.hpp
+-- Generated: BaseRtpEndpointImpl.hpp
+-- Generated: MediaElementImpl.hpp
+-- Generated: MediaObjectImpl.cpp
+-- Generated: ServerManagerImpl.cpp
+-- Generated: SessionEndpointImpl.cpp
+-- Generated: HubImpl.cpp
+-- Generated: FilterImpl.cpp
+-- Generated: EndpointImpl.cpp
+-- Generated: HubPortImpl.cpp
+-- Generated: PassThroughImpl.cpp
+-- Generated: UriEndpointImpl.cpp
+-- Generated: MediaPipelineImpl.cpp
+-- Generated: SdpEndpointImpl.cpp
+-- Generated: BaseRtpEndpointImpl.cpp
+-- Generated: MediaElementImpl.cpp
+-- Generated: FindKMSCORE.cmake.in
+-- Getting config files from /root/kms-omni-build/kms-core/src/server/config
+-- Found config files: /root/kms-omni-build/kms-core/src/server/config/BaseRtpEndpoint.conf.ini;/root/kms-omni-build/kms-core/src/server/config/MediaElement.conf.ini;/root/kms-omni-build/kms-core/src/server/config/SdpEndpoint.conf.json;/root/kms-omni-build/kms-core/src/server/config/UriEndpoint.conf.ini
+-- Found GLIB-MKENUMS: /usr/bin/glib-mkenums  
+-- Found GLIB-GENMARSHAL: /usr/bin/glib-genmarshal  
+-- Adding test: test_hubport
+-- Adding test: test_filterelement
+-- Adding test: test_agnosticbin
+-- Adding test: test_agnosticbin_negotiation
+-- Adding test: test_agnosticbin3
+-- Adding test: test_audiomixerbin
+-- Adding test: test_bufferinjector
+-- Adding test: test_pad_connections
+-- Adding test: test_passthrough
+-- Adding test: test_sdp_agent
+-- Adding test: test_metadata
+-- Adding test: test_lists
+-- Adding test: test_utils
+-- Adding test: test_refcounts
+-- Adding test: test_rembmanager
+-- Adding test: test_rtpsync
+-- Adding test: test_module_manager
+-- Adding test: test_media_set
+-- Adding test: test_media_element
+-- Adding test: test_rtp_endpoint_cpp
+-- Adding test: test_sdp_endpoint
+-- Adding test: test_media_object
+-- Adding test: test_complex_type
+-- Adding test: test_uri_endpoint
+-- CMake project: kms-elements
+If KurentoHelpers is not found, you need to install 'kms-cmake-utils' from the Kurento repository
+If CodeGenerator is not found, you need to install 'kms-core' from the Kurento repository
+-- KurentoModuleCreator Already found
+-- Version info from git: 6.13.0
+-- Project version: kms-elements-6.13.0
+-- Boost Already found
+-- gstreamer-1.5 Already found
+-- gstreamer-base-1.5 Already found
+-- gstreamer-video-1.5 Already found
+-- Checking for module 'gstreamer-app-1.5'
+--   Found gstreamer-app-1.5, version 1.8.1.1
+-- Resolving gstreamer-app-1.5 version ^1.5.0 with 1.8.1.1
+-- gstreamer-check-1.5 Already found
+-- gstreamer-sdp-1.5 Already found
+-- gstreamer-rtp-1.5 Already found
+-- gstreamer-pbutils-1.5 Already found
+-- Checking for module 'gstreamer-sctp-1.5'
+--   Found gstreamer-sctp-1.5, version 0.10.0.1
+-- Found gstreamer-sctp-1.5
+-- glibmm-2.4 Already found
+-- gstreamer-1.5 Already found
+-- gstreamer-base-1.5 Already found
+-- gstreamer-sdp-1.5 Already found
+-- gstreamer-pbutils-1.5 Already found
+-- gstreamer-1.5 Already found
+-- gstreamer-base-1.5 Already found
+-- gstreamer-sdp-1.5 Already found
+-- gstreamer-pbutils-1.5 Already found
+-- Found KmsGstCommons: 6.13.0 (found version "6.13.0") 
+-- Found KmsGstCommons
+-- Checking for module 'libsoup-2.4'
+--   Found libsoup-2.4, version 2.62.1
+-- Resolving libsoup-2.4 version ^2.40 with 2.62.1
+-- Checking for module 'nice'
+--   Found nice, version 0.1.14.1
+-- Resolving nice version ^0.1.13 with 0.1.14.1
+-- Checking for module 'gio-2.0'
+--   Found gio-2.0, version 2.56.4
+-- Resolving gio-2.0 version ^2.38 with 2.56.4
+-- uuid Already found
+-- Checking for module 'openssl'
+--   Found openssl, version 1.0.2n
+-- Found openssl
+-- libnice version >= 0.1.14, enable specific tests
+-- KurentoModuleCreator Already found
+-- Including generated cmake elementsDependencies.cmake
+-- Looking for KMSCORE: 6.13.0
+-- KmsGstCommons Already found
+-- gstreamer-1.5 Already found
+-- gstreamer-sdp-1.5 Already found
+-- KmsJsonRpc Already found
+-- sigc++-2.0 Already found
+-- glibmm-2.4 Already found
+-- Boost Already found
+-- Looking for KMSCORE: 6.13.0
+-- KmsGstCommons Already found
+-- gstreamer-1.5 Already found
+-- gstreamer-sdp-1.5 Already found
+-- KmsJsonRpc Already found
+-- sigc++-2.0 Already found
+-- glibmm-2.4 Already found
+-- Boost Already found
+-- Found KMSCORE: 6.13.0 (found version "6.13.0") 
+-- Resolving KMSCORE version ^6.7.0 with 6.13.0
+-- Generated: kmselements.pc.in
+-- Generated: PlayerEndpointImpl.hpp
+-- Generated: WebRtcEndpointImpl.hpp
+-- Generated: HttpPostEndpointImpl.hpp
+-- Generated: HttpEndpointImpl.hpp
+-- Generated: DispatcherOneToManyImpl.hpp
+-- Generated: MixerImpl.hpp
+-- Generated: RtpEndpointImpl.hpp
+-- Generated: CompositeImpl.hpp
+-- Generated: RecorderEndpointImpl.hpp
+-- Generated: DispatcherImpl.hpp
+-- Generated: AlphaBlendingImpl.hpp
+-- Generated: PlayerEndpointImpl.cpp
+-- Generated: WebRtcEndpointImpl.cpp
+-- Generated: HttpPostEndpointImpl.cpp
+-- Generated: HttpEndpointImpl.cpp
+-- Generated: DispatcherOneToManyImpl.cpp
+-- Generated: MixerImpl.cpp
+-- Generated: RtpEndpointImpl.cpp
+-- Generated: CompositeImpl.cpp
+-- Generated: RecorderEndpointImpl.cpp
+-- Generated: DispatcherImpl.cpp
+-- Generated: AlphaBlendingImpl.cpp
+-- Generated: FindKMSELEMENTS.cmake.in
+-- Getting config files from /root/kms-omni-build/kms-elements/src/server/config
+-- Found config files: /root/kms-omni-build/kms-elements/src/server/config/HttpEndpoint.conf.ini;/root/kms-omni-build/kms-elements/src/server/config/PlayerEndpoint.conf.ini;/root/kms-omni-build/kms-elements/src/server/config/WebRtcEndpoint.conf.ini
+-- Adding test: test_constructors
+-- Adding test: test_rtp_endpoint
+-- Adding test: test_recorder
+-- Adding test: test_player
+-- Adding test: test_httpendpoint
+-- Adding test: test_recorderendpoint
+-- Adding test: test_playerendpoint
+-- Adding test: test_rtpendpoint
+-- Adding test: test_rtpendpoint_audio
+-- Adding test: test_webrtcendpoint
+-- Adding test: test_dispatcheronetomany
+-- Adding test: test_webrtc_data_proto
+-- Adding test: test_srtp
+-- Adding test: test_ice_candidates
+-- CMake project: kms-filters
+If KurentoHelpers is not found, you need to install 'kms-cmake-utils' from the Kurento repository
+If CodeGenerator is not found, you need to install 'kms-core' from the Kurento repository
+-- KurentoModuleCreator Already found
+-- Version info from git: 6.13.0
+-- Project version: kms-filters-6.13.0
+-- gstreamer-1.5 Already found
+-- gstreamer-base-1.5 Already found
+-- gstreamer-video-1.5 Already found
+-- gstreamer-check-1.5 Already found
+-- Checking for module 'opencv'
+--   Found opencv, version 3.2.0
+-- Resolving opencv version <4.0.0 with 3.2.0
+-- libsoup-2.4 Already found
+-- KurentoModuleCreator Already found
+-- Including generated cmake filtersDependencies.cmake
+-- KMSCORE Already found
+-- Looking for KMSELEMENTS: 6.13.0
+-- KMSCORE Already found
+-- Looking for KMSELEMENTS: 6.13.0
+-- KMSCORE Already found
+-- Found KMSELEMENTS: 6.13.0 (found version "6.13.0") 
+-- Resolving KMSELEMENTS version ^6.7.0 with 6.13.0
+-- Generated: kmsfilters.pc.in
+-- Generated: ImageOverlayFilterImpl.hpp
+-- Generated: GStreamerFilterImpl.hpp
+-- Generated: OpenCVFilterImpl.hpp
+-- Generated: ZBarFilterImpl.hpp
+-- Generated: FaceOverlayFilterImpl.hpp
+-- Generated: ImageOverlayFilterImpl.cpp
+-- Generated: GStreamerFilterImpl.cpp
+-- Generated: OpenCVFilterImpl.cpp
+-- Generated: ZBarFilterImpl.cpp
+-- Generated: FaceOverlayFilterImpl.cpp
+-- Generated: FindKMSFILTERS.cmake.in
+-- Getting config files from /root/kms-omni-build/kms-filters/src/server/config
+-- No config files found
+-- Adding test: test_filters_constructors
+-- Adding test: test_faceoverlay
+-- Adding test: test_movementdetector
+-- Adding test: test_logooverlay
+-- CMake project: kurento-media-server
+If KurentoHelpers is not found, you need to install 'kms-cmake-utils' from the Kurento repository
+-- Version info from git: 6.13.0
+-- Project version: kurento-media-server-6.13.0
+-- KMSCORE Already found
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Looking for pthread_create
+-- Looking for pthread_create - found
+-- Found Threads: TRUE  
+-- Boost version: 1.65.1
+-- Found the following Boost libraries:
+--   filesystem
+--   system
+--   unit_test_framework
+--   program_options
+--   thread
+--   log
+--   chrono
+--   date_time
+--   atomic
+--   log_setup
+--   regex
+-- Found Boost COMPONENTS filesystem;system;unit_test_framework;program_options;thread;log
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.0.2n") 
+-- Checking for module 'glibmm-2.4'
+--   Found glibmm-2.4, version 2.56.0
+-- Checking for module 'gstreamer-1.5'
+--   Found gstreamer-1.5, version 1.8.1.1
+-- Checking for module 'gstreamer-sdp-1.5'
+--   Found gstreamer-sdp-1.5, version 1.8.1.1
+-- Checking for module 'libevent>=2.0.16'
+--   Found libevent, version 2.1.8-stable
+-- Adding test: test_server_json
+-- Adding test: test_server_events
+-- Adding test: test_server_json_session
+-- Adding test: test_server_duplicate_requests
+-- Adding test: test_config_read
+-- Adding test: test_registrar
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /root/kms-omni-build/build-RelWithDebInfo
+~/kms-omni-build
+~/kms-omni-build/build-RelWithDebInfo ~/kms-omni-build
+Scanning dependencies of target jsonrpc
+[  0%] Building CXX object kms-jsonrpc/src/CMakeFiles/jsonrpc.dir/JsonRpcHandler.cpp.o
+[  0%] Building CXX object kms-jsonrpc/src/CMakeFiles/jsonrpc.dir/JsonRpcClient.cpp.o
+[  0%] Building CXX object kms-jsonrpc/src/CMakeFiles/jsonrpc.dir/JsonRpcUtils.cpp.o
+[  0%] Building CXX object kms-jsonrpc/src/CMakeFiles/jsonrpc.dir/JsonFixes.cpp.o
+[  0%] Linking CXX shared library libjsonrpc.so
+[  0%] Built target jsonrpc
+Scanning dependencies of target kmsrefstruct
+[  0%] Building C object kms-core/src/gst-plugins/commons/CMakeFiles/kmsrefstruct.dir/kmsrefstruct.c.o
+[  0%] Linking C static library libkmsrefstruct.a
+[  0%] Built target kmsrefstruct
+Scanning dependencies of target sdputils
+[  1%] Building C object kms-core/src/gst-plugins/commons/CMakeFiles/sdputils.dir/sdp_utils.c.o
+[  1%] Linking C static library libsdputils.a
+[  1%] Built target sdputils
+Scanning dependencies of target kmsutils
+[  1%] Building C object kms-core/src/gst-plugins/commons/CMakeFiles/kmsutils.dir/kmsutils.c.o
+[  1%] Linking C static library libkmsutils.a
+[  1%] Built target kmsutils
+[  2%] Generating kms-sdp-agent-marshal.h
+INFO: Reading /root/kms-omni-build/kms-core/src/gst-plugins/commons/sdpagent/kms-sdp-agent-marshal.list...
+[  2%] Generating kms-sdp-agent-enumtypes.h
+[  2%] Generating kms-sdp-agent-enumtypes.c
+[  2%] Generating kms-sdp-agent-marshal.c
+INFO: Reading /root/kms-omni-build/kms-core/src/gst-plugins/commons/sdpagent/kms-sdp-agent-marshal.list...
+Scanning dependencies of target kmssdpagent
+[  2%] Building C object kms-core/src/gst-plugins/commons/sdpagent/CMakeFiles/kmssdpagent.dir/kmssdpagentcommon.c.o
+[  2%] Building C object kms-core/src/gst-plugins/commons/sdpagent/CMakeFiles/kmssdpagent.dir/kmssdpagent.c.o
+[  2%] Building C object kms-core/src/gst-plugins/commons/sdpagent/CMakeFiles/kmssdpagent.dir/kmssdpmediahandler.c.o
+[  2%] Building C object kms-core/src/gst-plugins/commons/sdpagent/CMakeFiles/kmssdpagent.dir/kmssdprtpmediahandler.c.o
+[  3%] Building C object kms-core/src/gst-plugins/commons/sdpagent/CMakeFiles/kmssdpagent.dir/kmssdprtpavpfmediahandler.c.o
+[  3%] Building C object kms-core/src/gst-plugins/commons/sdpagent/CMakeFiles/kmssdpagent.dir/kmssdprtpavpmediahandler.c.o
+[  3%] Building C object kms-core/src/gst-plugins/commons/sdpagent/CMakeFiles/kmssdpagent.dir/kmssdprtpsavpmediahandler.c.o
+[  3%] Building C object kms-core/src/gst-plugins/commons/sdpagent/CMakeFiles/kmssdpagent.dir/kmssdprtpsavpfmediahandler.c.o
+[  3%] Building C object kms-core/src/gst-plugins/commons/sdpagent/CMakeFiles/kmssdpagent.dir/kmssdpsctpmediahandler.c.o
+[  3%] Building C object kms-core/src/gst-plugins/commons/sdpagent/CMakeFiles/kmssdpagent.dir/kmsisdppayloadmanager.c.o
+[  4%] Building C object kms-core/src/gst-plugins/commons/sdpagent/CMakeFiles/kmssdpagent.dir/kmssdppayloadmanager.c.o
+[  4%] Building C object kms-core/src/gst-plugins/commons/sdpagent/CMakeFiles/kmssdpagent.dir/kmsisdpmediaextension.c.o
+[  4%] Building C object kms-core/src/gst-plugins/commons/sdpagent/CMakeFiles/kmssdpagent.dir/kmsisdpsessionextension.c.o
+[  4%] Building C object kms-core/src/gst-plugins/commons/sdpagent/CMakeFiles/kmssdpagent.dir/kmssdpsdesext.c.o
+[  4%] Building C object kms-core/src/gst-plugins/commons/sdpagent/CMakeFiles/kmssdpagent.dir/kmssdpbasegroup.c.o
+[  4%] Building C object kms-core/src/gst-plugins/commons/sdpagent/CMakeFiles/kmssdpagent.dir/kmssdpbundlegroup.c.o
+[  6%] Building C object kms-core/src/gst-plugins/commons/sdpagent/CMakeFiles/kmssdpagent.dir/kmssdpmidext.c.o
+[  6%] Building C object kms-core/src/gst-plugins/commons/sdpagent/CMakeFiles/kmssdpagent.dir/kmssdpgroupmanager.c.o
+[  6%] Building C object kms-core/src/gst-plugins/commons/sdpagent/CMakeFiles/kmssdpagent.dir/kmssdprejectmediahandler.c.o
+[  6%] Building C object kms-core/src/gst-plugins/commons/sdpagent/CMakeFiles/kmssdpagent.dir/kmssdpconnectionext.c.o
+[  6%] Building C object kms-core/src/gst-plugins/commons/sdpagent/CMakeFiles/kmssdpagent.dir/kmssdpulpfecext.c.o
+[  7%] Building C object kms-core/src/gst-plugins/commons/sdpagent/CMakeFiles/kmssdpagent.dir/kmssdpredundantext.c.o
+[  7%] Building C object kms-core/src/gst-plugins/commons/sdpagent/CMakeFiles/kmssdpagent.dir/kmssdpmediadirext.c.o
+[  7%] Building C object kms-core/src/gst-plugins/commons/sdpagent/CMakeFiles/kmssdpagent.dir/kms-sdp-agent-enumtypes.c.o
+[  7%] Building C object kms-core/src/gst-plugins/commons/sdpagent/CMakeFiles/kmssdpagent.dir/kms-sdp-agent-marshal.c.o
+[  7%] Linking C shared library libkmssdpagent.so
+[  7%] Built target kmssdpagent
+Scanning dependencies of target kurento-module-creator
+[  7%] Generating kurento-module-creator/kurento-module-creator-jar-with-dependencies.jar
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.google.inject.internal.cglib.core.$ReflectUtils$1 (file:/usr/share/maven/lib/guice.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+WARNING: Please consider reporting this to the maintainers of com.google.inject.internal.cglib.core.$ReflectUtils$1
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m-----------------< [0;36morg.kurento:kurento-module-creator[0;1m >-----------------[m
+[[1;34mINFO[m] [1mBuilding Kurento Module Creator 6.13.0[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mkurento-module-creator[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 31 resources
+[[1;34mINFO[m] Copying 1 resource
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.2:compile[m [1m(default-compile)[m @ [36mkurento-module-creator[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 75 source files to /root/kms-omni-build/build-RelWithDebInfo/kurento-module-creator/classes
+[[1;34mINFO[m] /root/kms-omni-build/kurento-module-creator/src/main/java/org/kurento/modulecreator/Main.java: Some input files use or override a deprecated API.
+[[1;34mINFO[m] /root/kms-omni-build/kurento-module-creator/src/main/java/org/kurento/modulecreator/Main.java: Recompile with -Xlint:deprecation for details.
+[[1;34mINFO[m] /root/kms-omni-build/kurento-module-creator/src/main/java/com/github/zafarkhaja/semver/util/Stream.java: /root/kms-omni-build/kurento-module-creator/src/main/java/com/github/zafarkhaja/semver/util/Stream.java uses unchecked or unsafe operations.
+[[1;34mINFO[m] /root/kms-omni-build/kurento-module-creator/src/main/java/com/github/zafarkhaja/semver/util/Stream.java: Recompile with -Xlint:unchecked for details.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mkurento-module-creator[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 27 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.2:testCompile[m [1m(default-testCompile)[m @ [36mkurento-module-creator[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 11 source files to /root/kms-omni-build/build-RelWithDebInfo/kurento-module-creator/test-classes
+[[1;34mINFO[m] /root/kms-omni-build/kurento-module-creator/src/test/java/org/kurento/modulecreator/test/ReleaseModuleWithDevDependTest.java: /root/kms-omni-build/kurento-module-creator/src/test/java/org/kurento/modulecreator/test/ReleaseModuleWithDevDependTest.java uses or overrides a deprecated API.
+[[1;34mINFO[m] /root/kms-omni-build/kurento-module-creator/src/test/java/org/kurento/modulecreator/test/ReleaseModuleWithDevDependTest.java: Recompile with -Xlint:deprecation for details.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.12.4:test[m [1m(default-test)[m @ [36mkurento-module-creator[0;1m ---[m
+[[1;34mINFO[m] Tests are skipped.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-jar-plugin:2.4:jar[m [1m(default-jar)[m @ [36mkurento-module-creator[0;1m ---[m
+[[1;34mINFO[m] Building jar: /root/kms-omni-build/build-RelWithDebInfo/kurento-module-creator/kurento-module-creator-6.13.0.jar
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-assembly-plugin:2.4.1:single[m [1m(assemble-all)[m @ [36mkurento-module-creator[0;1m ---[m
+[[1;34mINFO[m] Building jar: /root/kms-omni-build/build-RelWithDebInfo/kurento-module-creator/kurento-module-creator-jar-with-dependencies.jar
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  10.264 s
+[[1;34mINFO[m] Finished at: 2020-01-03T08:52:30Z
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[  8%] Generating kurento-module-creator/kurento-module-creator.generated
+-- CMake project: kms-omni-build
+-- CMake project: kms-cmake-utils
+-- Version info from git: 6.13.0
+-- Project version: kms-cmake-utils-6.13.0
+-- CMake project: kms-jsonrpc
+If KurentoHelpers is not found, you need to install 'kms-cmake-utils' from the Kurento repository
+-- Version info from git: 6.13.0
+-- Project version: kms-jsonrpc-6.13.0
+-- Boost version: 1.65.1
+-- Found the following Boost libraries:
+--   unit_test_framework
+-- Adding test: test_rpc
+-- Adding custom target: 'check_build'
+-- Adding custom target: 'check'
+-- Adding test: test_serialize
+-- KurentoModuleCreator Already found
+-- CMake project: kms-core
+If KurentoHelpers is not found, you need to install 'kms-cmake-utils' from the Kurento repository
+-- KurentoModuleCreator Already found
+-- Version info from git: 6.13.0
+-- Project version: kms-core-6.13.0
+-- Boost Already found
+-- gstreamer-1.5 Already found
+-- gstreamer-base-1.5 Already found
+-- gstreamer-video-1.5 Already found
+-- gstreamer-check-1.5 Already found
+-- gstreamer-sdp-1.5 Already found
+-- gstreamer-pbutils-1.5 Already found
+-- gstreamer-rtp-1.5 Already found
+-- KmsJsonRpc Already found
+-- sigc++-2.0 Already found
+-- glibmm-2.4 Already found
+-- uuid Already found
+-- KurentoModuleCreator Already found
+-- Including generated cmake coreDependencies.cmake
+-- Generated: kmscore.pc.in
+-- Generated: MediaObjectImpl.hpp
+-- Generated: ServerManagerImpl.hpp
+-- Generated: SessionEndpointImpl.hpp
+-- Generated: HubImpl.hpp
+-- Generated: FilterImpl.hpp
+-- Generated: EndpointImpl.hpp
+-- Generated: HubPortImpl.hpp
+-- Generated: PassThroughImpl.hpp
+-- Generated: UriEndpointImpl.hpp
+-- Generated: MediaPipelineImpl.hpp
+-- Generated: SdpEndpointImpl.hpp
+-- Generated: BaseRtpEndpointImpl.hpp
+-- Generated: MediaElementImpl.hpp
+-- Generated: MediaObjectImpl.cpp
+-- Generated: ServerManagerImpl.cpp
+-- Generated: SessionEndpointImpl.cpp
+-- Generated: HubImpl.cpp
+-- Generated: FilterImpl.cpp
+-- Generated: EndpointImpl.cpp
+-- Generated: HubPortImpl.cpp
+-- Generated: PassThroughImpl.cpp
+-- Generated: UriEndpointImpl.cpp
+-- Generated: MediaPipelineImpl.cpp
+-- Generated: SdpEndpointImpl.cpp
+-- Generated: BaseRtpEndpointImpl.cpp
+-- Generated: MediaElementImpl.cpp
+-- Generated: FindKMSCORE.cmake.in
+-- Getting config files from /root/kms-omni-build/kms-core/src/server/config
+-- Found config files: /root/kms-omni-build/kms-core/src/server/config/BaseRtpEndpoint.conf.ini;/root/kms-omni-build/kms-core/src/server/config/MediaElement.conf.ini;/root/kms-omni-build/kms-core/src/server/config/SdpEndpoint.conf.json;/root/kms-omni-build/kms-core/src/server/config/UriEndpoint.conf.ini
+-- Adding test: test_hubport
+-- Adding test: test_filterelement
+-- Adding test: test_agnosticbin
+-- Adding test: test_agnosticbin_negotiation
+-- Adding test: test_agnosticbin3
+-- Adding test: test_audiomixerbin
+-- Adding test: test_bufferinjector
+-- Adding test: test_pad_connections
+-- Adding test: test_passthrough
+-- Adding test: test_sdp_agent
+-- Adding test: test_metadata
+-- Adding test: test_lists
+-- Adding test: test_utils
+-- Adding test: test_refcounts
+-- Adding test: test_rembmanager
+-- Adding test: test_rtpsync
+-- Adding test: test_module_manager
+-- Adding test: test_media_set
+-- Adding test: test_media_element
+-- Adding test: test_rtp_endpoint_cpp
+-- Adding test: test_sdp_endpoint
+-- Adding test: test_media_object
+-- Adding test: test_complex_type
+-- Adding test: test_uri_endpoint
+-- CMake project: kms-elements
+If KurentoHelpers is not found, you need to install 'kms-cmake-utils' from the Kurento repository
+If CodeGenerator is not found, you need to install 'kms-core' from the Kurento repository
+-- KurentoModuleCreator Already found
+-- Version info from git: 6.13.0
+-- Project version: kms-elements-6.13.0
+-- Boost Already found
+-- gstreamer-1.5 Already found
+-- gstreamer-base-1.5 Already found
+-- gstreamer-video-1.5 Already found
+-- gstreamer-app-1.5 Already found
+-- gstreamer-check-1.5 Already found
+-- gstreamer-sdp-1.5 Already found
+-- gstreamer-rtp-1.5 Already found
+-- gstreamer-pbutils-1.5 Already found
+-- gstreamer-sctp-1.5 Already found
+-- glibmm-2.4 Already found
+-- KmsGstCommons Already found
+-- libsoup-2.4 Already found
+-- nice Already found
+-- gio-2.0 Already found
+-- uuid Already found
+-- openssl Already found
+-- libnice version >= 0.1.14, enable specific tests
+-- KurentoModuleCreator Already found
+-- Including generated cmake elementsDependencies.cmake
+-- KMSCORE Already found
+-- Generated: kmselements.pc.in
+-- Generated: PlayerEndpointImpl.hpp
+-- Generated: WebRtcEndpointImpl.hpp
+-- Generated: HttpPostEndpointImpl.hpp
+-- Generated: HttpEndpointImpl.hpp
+-- Generated: DispatcherOneToManyImpl.hpp
+-- Generated: MixerImpl.hpp
+-- Generated: RtpEndpointImpl.hpp
+-- Generated: CompositeImpl.hpp
+-- Generated: RecorderEndpointImpl.hpp
+-- Generated: DispatcherImpl.hpp
+-- Generated: AlphaBlendingImpl.hpp
+-- Generated: PlayerEndpointImpl.cpp
+-- Generated: WebRtcEndpointImpl.cpp
+-- Generated: HttpPostEndpointImpl.cpp
+-- Generated: HttpEndpointImpl.cpp
+-- Generated: DispatcherOneToManyImpl.cpp
+-- Generated: MixerImpl.cpp
+-- Generated: RtpEndpointImpl.cpp
+-- Generated: CompositeImpl.cpp
+-- Generated: RecorderEndpointImpl.cpp
+-- Generated: DispatcherImpl.cpp
+-- Generated: AlphaBlendingImpl.cpp
+-- Generated: FindKMSELEMENTS.cmake.in
+-- Getting config files from /root/kms-omni-build/kms-elements/src/server/config
+-- Found config files: /root/kms-omni-build/kms-elements/src/server/config/HttpEndpoint.conf.ini;/root/kms-omni-build/kms-elements/src/server/config/PlayerEndpoint.conf.ini;/root/kms-omni-build/kms-elements/src/server/config/WebRtcEndpoint.conf.ini
+-- Adding test: test_constructors
+-- Adding test: test_rtp_endpoint
+-- Adding test: test_recorder
+-- Adding test: test_player
+-- Adding test: test_httpendpoint
+-- Adding test: test_recorderendpoint
+-- Adding test: test_playerendpoint
+-- Adding test: test_rtpendpoint
+-- Adding test: test_rtpendpoint_audio
+-- Adding test: test_webrtcendpoint
+-- Adding test: test_dispatcheronetomany
+-- Adding test: test_webrtc_data_proto
+-- Adding test: test_srtp
+-- Adding test: test_ice_candidates
+-- CMake project: kms-filters
+If KurentoHelpers is not found, you need to install 'kms-cmake-utils' from the Kurento repository
+If CodeGenerator is not found, you need to install 'kms-core' from the Kurento repository
+-- KurentoModuleCreator Already found
+-- Version info from git: 6.13.0
+-- Project version: kms-filters-6.13.0
+-- gstreamer-1.5 Already found
+-- gstreamer-base-1.5 Already found
+-- gstreamer-video-1.5 Already found
+-- gstreamer-check-1.5 Already found
+-- opencv Already found
+-- libsoup-2.4 Already found
+-- KurentoModuleCreator Already found
+-- Including generated cmake filtersDependencies.cmake
+-- KMSCORE Already found
+-- KMSELEMENTS Already found
+-- Generated: kmsfilters.pc.in
+-- Generated: ImageOverlayFilterImpl.hpp
+-- Generated: GStreamerFilterImpl.hpp
+-- Generated: OpenCVFilterImpl.hpp
+-- Generated: ZBarFilterImpl.hpp
+-- Generated: FaceOverlayFilterImpl.hpp
+-- Generated: ImageOverlayFilterImpl.cpp
+-- Generated: GStreamerFilterImpl.cpp
+-- Generated: OpenCVFilterImpl.cpp
+-- Generated: ZBarFilterImpl.cpp
+-- Generated: FaceOverlayFilterImpl.cpp
+-- Generated: FindKMSFILTERS.cmake.in
+-- Getting config files from /root/kms-omni-build/kms-filters/src/server/config
+-- No config files found
+-- Adding test: test_filters_constructors
+-- Adding test: test_faceoverlay
+-- Adding test: test_movementdetector
+-- Adding test: test_logooverlay
+-- CMake project: kurento-media-server
+If KurentoHelpers is not found, you need to install 'kms-cmake-utils' from the Kurento repository
+-- Version info from git: 6.13.0
+-- Project version: kurento-media-server-6.13.0
+-- KMSCORE Already found
+-- Boost Already found
+-- Adding test: test_server_json
+-- Adding test: test_server_events
+-- Adding test: test_server_json_session
+-- Adding test: test_server_duplicate_requests
+-- Adding test: test_config_read
+-- Adding test: test_registrar
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /root/kms-omni-build/build-RelWithDebInfo
+[  8%] Generating kurento-module-creator/kurento-module-creator
+[  8%] Built target kurento-module-creator
+[  9%] Generating cpp_interface.generated, interface/generated-cpp/MediaObject.cpp, interface/generated-cpp/ServerManager.cpp, interface/generated-cpp/SessionEndpoint.cpp, interface/generated-cpp/Hub.cpp, interface/generated-cpp/Filter.cpp, interface/generated-cpp/Endpoint.cpp, interface/generated-cpp/HubPort.cpp, interface/generated-cpp/PassThrough.cpp, interface/generated-cpp/UriEndpoint.cpp, interface/generated-cpp/MediaPipeline.cpp, interface/generated-cpp/SdpEndpoint.cpp, interface/generated-cpp/BaseRtpEndpoint.cpp, interface/generated-cpp/MediaElement.cpp, interface/generated-cpp/RaiseBase.cpp, interface/generated-cpp/Error.cpp, interface/generated-cpp/MediaSessionTerminated.cpp, interface/generated-cpp/MediaSessionStarted.cpp, interface/generated-cpp/Media.cpp, interface/generated-cpp/ObjectCreated.cpp, interface/generated-cpp/ObjectDestroyed.cpp, interface/generated-cpp/MediaStateChanged.cpp, interface/generated-cpp/ConnectionStateChanged.cpp, interface/generated-cpp/MediaFlowOutStateChange.cpp, interface/generated-cpp/MediaFlowInStateChange.cpp, interface/generated-cpp/MediaTranscodingStateChange.cpp, interface/generated-cpp/ElementConnected.cpp, interface/generated-cpp/ElementDisconnected.cpp, interface/generated-cpp/UriEndpointStateChanged.cpp, interface/generated-cpp/UriEndpointState.cpp, interface/generated-cpp/ServerInfo.cpp, interface/generated-cpp/ServerType.cpp, interface/generated-cpp/GstreamerDotDetails.cpp, interface/generated-cpp/ModuleInfo.cpp, interface/generated-cpp/MediaState.cpp, interface/generated-cpp/MediaFlowState.cpp, interface/generated-cpp/MediaTranscodingState.cpp, interface/generated-cpp/ConnectionState.cpp, interface/generated-cpp/MediaType.cpp, interface/generated-cpp/FilterType.cpp, interface/generated-cpp/VideoCodec.cpp, interface/generated-cpp/AudioCodec.cpp, interface/generated-cpp/Fraction.cpp, interface/generated-cpp/AudioCaps.cpp, interface/generated-cpp/VideoCaps.cpp, interface/generated-cpp/ElementConnectionData.cpp, interface/generated-cpp/Tag.cpp, interface/generated-cpp/StatsType.cpp, interface/generated-cpp/MediaLatencyStat.cpp, interface/generated-cpp/Stats.cpp, interface/generated-cpp/ElementStats.cpp, interface/generated-cpp/EndpointStats.cpp, interface/generated-cpp/RTCStats.cpp, interface/generated-cpp/RTCRTPStreamStats.cpp, interface/generated-cpp/RTCCodec.cpp, interface/generated-cpp/RTCInboundRTPStreamStats.cpp, interface/generated-cpp/RTCOutboundRTPStreamStats.cpp, interface/generated-cpp/RTCPeerConnectionStats.cpp, interface/generated-cpp/RTCMediaStreamStats.cpp, interface/generated-cpp/RTCMediaStreamTrackStats.cpp, interface/generated-cpp/RTCDataChannelState.cpp, interface/generated-cpp/RTCDataChannelStats.cpp, interface/generated-cpp/RTCTransportStats.cpp, interface/generated-cpp/RTCStatsIceCandidateType.cpp, interface/generated-cpp/RTCIceCandidateAttributes.cpp, interface/generated-cpp/RTCStatsIceCandidatePairState.cpp, interface/generated-cpp/RTCIceCandidatePairStats.cpp, interface/generated-cpp/RTCCertificateStats.cpp, interface/generated-cpp/CodecConfiguration.cpp, interface/generated-cpp/RembParams.cpp, interface/generated-cpp/MediaObject.hpp, interface/generated-cpp/ServerManager.hpp, interface/generated-cpp/SessionEndpoint.hpp, interface/generated-cpp/Hub.hpp, interface/generated-cpp/Filter.hpp, interface/generated-cpp/Endpoint.hpp, interface/generated-cpp/HubPort.hpp, interface/generated-cpp/PassThrough.hpp, interface/generated-cpp/UriEndpoint.hpp, interface/generated-cpp/MediaPipeline.hpp, interface/generated-cpp/SdpEndpoint.hpp, interface/generated-cpp/BaseRtpEndpoint.hpp, interface/generated-cpp/MediaElement.hpp, interface/generated-cpp/RaiseBase.hpp, interface/generated-cpp/Error.hpp, interface/generated-cpp/MediaSessionTerminated.hpp, interface/generated-cpp/MediaSessionStarted.hpp, interface/generated-cpp/Media.hpp, interface/generated-cpp/ObjectCreated.hpp, interface/generated-cpp/ObjectDestroyed.hpp, interface/generated-cpp/MediaStateChanged.hpp, interface/generated-cpp/ConnectionStateChanged.hpp, interface/generated-cpp/MediaFlowOutStateChange.hpp, interface/generated-cpp/MediaFlowInStateChange.hpp, interface/generated-cpp/MediaTranscodingStateChange.hpp, interface/generated-cpp/ElementConnected.hpp, interface/generated-cpp/ElementDisconnected.hpp, interface/generated-cpp/UriEndpointStateChanged.hpp, interface/generated-cpp/UriEndpointState.hpp, interface/generated-cpp/ServerInfo.hpp, interface/generated-cpp/ServerType.hpp, interface/generated-cpp/GstreamerDotDetails.hpp, interface/generated-cpp/ModuleInfo.hpp, interface/generated-cpp/MediaState.hpp, interface/generated-cpp/MediaFlowState.hpp, interface/generated-cpp/MediaTranscodingState.hpp, interface/generated-cpp/ConnectionState.hpp, interface/generated-cpp/MediaType.hpp, interface/generated-cpp/FilterType.hpp, interface/generated-cpp/VideoCodec.hpp, interface/generated-cpp/AudioCodec.hpp, interface/generated-cpp/Fraction.hpp, interface/generated-cpp/AudioCaps.hpp, interface/generated-cpp/VideoCaps.hpp, interface/generated-cpp/ElementConnectionData.hpp, interface/generated-cpp/Tag.hpp, interface/generated-cpp/StatsType.hpp, interface/generated-cpp/MediaLatencyStat.hpp, interface/generated-cpp/Stats.hpp, interface/generated-cpp/ElementStats.hpp, interface/generated-cpp/EndpointStats.hpp, interface/generated-cpp/RTCStats.hpp, interface/generated-cpp/RTCRTPStreamStats.hpp, interface/generated-cpp/RTCCodec.hpp, interface/generated-cpp/RTCInboundRTPStreamStats.hpp, interface/generated-cpp/RTCOutboundRTPStreamStats.hpp, interface/generated-cpp/RTCPeerConnectionStats.hpp, interface/generated-cpp/RTCMediaStreamStats.hpp, interface/generated-cpp/RTCMediaStreamTrackStats.hpp, interface/generated-cpp/RTCDataChannelState.hpp, interface/generated-cpp/RTCDataChannelStats.hpp, interface/generated-cpp/RTCTransportStats.hpp, interface/generated-cpp/RTCStatsIceCandidateType.hpp, interface/generated-cpp/RTCIceCandidateAttributes.hpp, interface/generated-cpp/RTCStatsIceCandidatePairState.hpp, interface/generated-cpp/RTCIceCandidatePairStats.hpp, interface/generated-cpp/RTCCertificateStats.hpp, interface/generated-cpp/CodecConfiguration.hpp, interface/generated-cpp/RembParams.hpp
+Generation success
+[  9%] Generating cpp_interface_internal.generated, interface/generated-cpp/MediaObjectInternal.cpp, interface/generated-cpp/ServerManagerInternal.cpp, interface/generated-cpp/SessionEndpointInternal.cpp, interface/generated-cpp/HubInternal.cpp, interface/generated-cpp/FilterInternal.cpp, interface/generated-cpp/EndpointInternal.cpp, interface/generated-cpp/HubPortInternal.cpp, interface/generated-cpp/PassThroughInternal.cpp, interface/generated-cpp/UriEndpointInternal.cpp, interface/generated-cpp/MediaPipelineInternal.cpp, interface/generated-cpp/SdpEndpointInternal.cpp, interface/generated-cpp/BaseRtpEndpointInternal.cpp, interface/generated-cpp/MediaElementInternal.cpp, interface/generated-cpp/MediaObjectInternal.hpp, interface/generated-cpp/ServerManagerInternal.hpp, interface/generated-cpp/SessionEndpointInternal.hpp, interface/generated-cpp/HubInternal.hpp, interface/generated-cpp/FilterInternal.hpp, interface/generated-cpp/EndpointInternal.hpp, interface/generated-cpp/HubPortInternal.hpp, interface/generated-cpp/PassThroughInternal.hpp, interface/generated-cpp/UriEndpointInternal.hpp, interface/generated-cpp/MediaPipelineInternal.hpp, interface/generated-cpp/SdpEndpointInternal.hpp, interface/generated-cpp/BaseRtpEndpointInternal.hpp, interface/generated-cpp/MediaElementInternal.hpp
+Generation success
+Scanning dependencies of target kmscoreinterface
+[  9%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/MediaObjectInternal.cpp.o
+[  9%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/ServerManagerInternal.cpp.o
+[  9%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/SessionEndpointInternal.cpp.o
+[  9%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/HubInternal.cpp.o
+[  9%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/FilterInternal.cpp.o
+[ 10%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/EndpointInternal.cpp.o
+[ 10%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/HubPortInternal.cpp.o
+[ 10%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/PassThroughInternal.cpp.o
+[ 10%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/UriEndpointInternal.cpp.o
+[ 10%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/MediaPipelineInternal.cpp.o
+[ 10%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/SdpEndpointInternal.cpp.o
+[ 12%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/BaseRtpEndpointInternal.cpp.o
+[ 12%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/MediaElementInternal.cpp.o
+[ 12%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/MediaObject.cpp.o
+[ 12%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/ServerManager.cpp.o
+[ 12%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/SessionEndpoint.cpp.o
+[ 13%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/Hub.cpp.o
+[ 13%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/Filter.cpp.o
+[ 13%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/Endpoint.cpp.o
+[ 13%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/HubPort.cpp.o
+[ 13%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/PassThrough.cpp.o
+[ 13%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/UriEndpoint.cpp.o
+[ 14%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/MediaPipeline.cpp.o
+[ 14%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/SdpEndpoint.cpp.o
+[ 14%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/BaseRtpEndpoint.cpp.o
+[ 14%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/MediaElement.cpp.o
+[ 14%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/RaiseBase.cpp.o
+[ 14%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/Error.cpp.o
+[ 15%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/MediaSessionTerminated.cpp.o
+[ 15%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/MediaSessionStarted.cpp.o
+[ 15%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/Media.cpp.o
+[ 15%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/ObjectCreated.cpp.o
+[ 15%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/ObjectDestroyed.cpp.o
+[ 15%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/MediaStateChanged.cpp.o
+[ 17%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/ConnectionStateChanged.cpp.o
+[ 17%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/MediaFlowOutStateChange.cpp.o
+[ 17%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/MediaFlowInStateChange.cpp.o
+[ 17%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/MediaTranscodingStateChange.cpp.o
+[ 17%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/ElementConnected.cpp.o
+[ 18%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/ElementDisconnected.cpp.o
+[ 18%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/UriEndpointStateChanged.cpp.o
+[ 18%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/UriEndpointState.cpp.o
+[ 18%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/ServerInfo.cpp.o
+[ 18%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/ServerType.cpp.o
+[ 18%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/GstreamerDotDetails.cpp.o
+[ 19%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/ModuleInfo.cpp.o
+[ 19%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/MediaState.cpp.o
+[ 19%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/MediaFlowState.cpp.o
+[ 19%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/MediaTranscodingState.cpp.o
+[ 19%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/ConnectionState.cpp.o
+[ 19%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/MediaType.cpp.o
+[ 20%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/FilterType.cpp.o
+[ 20%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/VideoCodec.cpp.o
+[ 20%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/AudioCodec.cpp.o
+[ 20%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/Fraction.cpp.o
+[ 20%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/AudioCaps.cpp.o
+[ 21%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/VideoCaps.cpp.o
+[ 21%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/ElementConnectionData.cpp.o
+[ 21%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/Tag.cpp.o
+[ 21%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/StatsType.cpp.o
+[ 21%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/MediaLatencyStat.cpp.o
+[ 21%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/Stats.cpp.o
+[ 23%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/ElementStats.cpp.o
+[ 23%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/EndpointStats.cpp.o
+[ 23%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/RTCStats.cpp.o
+[ 23%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/RTCRTPStreamStats.cpp.o
+[ 23%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/RTCCodec.cpp.o
+[ 23%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/RTCInboundRTPStreamStats.cpp.o
+[ 24%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/RTCOutboundRTPStreamStats.cpp.o
+[ 24%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/RTCPeerConnectionStats.cpp.o
+[ 24%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/RTCMediaStreamStats.cpp.o
+[ 24%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/RTCMediaStreamTrackStats.cpp.o
+[ 24%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/RTCDataChannelState.cpp.o
+[ 25%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/RTCDataChannelStats.cpp.o
+[ 25%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/RTCTransportStats.cpp.o
+[ 25%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/RTCStatsIceCandidateType.cpp.o
+[ 25%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/RTCIceCandidateAttributes.cpp.o
+[ 25%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/RTCStatsIceCandidatePairState.cpp.o
+[ 25%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/RTCIceCandidatePairStats.cpp.o
+[ 26%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/RTCCertificateStats.cpp.o
+[ 26%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/CodecConfiguration.cpp.o
+[ 26%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreinterface.dir/interface/generated-cpp/RembParams.cpp.o
+[ 26%] Linking CXX static library libkmscoreinterface.a
+[ 26%] Built target kmscoreinterface
+[ 26%] Generating kms-core-marshal.h
+INFO: Reading /root/kms-omni-build/kms-core/src/gst-plugins/commons/kms-core-marshal.list...
+[ 26%] Generating kms-core-enumtypes.h
+[ 28%] Generating kms-core-enumtypes.c
+[ 28%] Generating kms-core-marshal.c
+INFO: Reading /root/kms-omni-build/kms-core/src/gst-plugins/commons/kms-core-marshal.list...
+Scanning dependencies of target kmsgstcommons
+[ 28%] Building C object kms-core/src/gst-plugins/commons/CMakeFiles/kmsgstcommons.dir/kmsrtcp.c.o
+[ 28%] Building C object kms-core/src/gst-plugins/commons/CMakeFiles/kmsgstcommons.dir/kmsremb.c.o
+[ 29%] Building C object kms-core/src/gst-plugins/commons/CMakeFiles/kmsgstcommons.dir/kmssdpsession.c.o
+[ 29%] Building C object kms-core/src/gst-plugins/commons/CMakeFiles/kmsgstcommons.dir/kmsbasertpsession.c.o
+[ 29%] Building C object kms-core/src/gst-plugins/commons/CMakeFiles/kmsgstcommons.dir/kmsirtpsessionmanager.c.o
+[ 29%] Building C object kms-core/src/gst-plugins/commons/CMakeFiles/kmsgstcommons.dir/kmsirtpconnection.c.o
+[ 29%] Building C object kms-core/src/gst-plugins/commons/CMakeFiles/kmsgstcommons.dir/kmsbasertpendpoint.c.o
+[ 30%] Building C object kms-core/src/gst-plugins/commons/CMakeFiles/kmsgstcommons.dir/kmsbasesdpendpoint.c.o
+[ 30%] Building C object kms-core/src/gst-plugins/commons/CMakeFiles/kmsgstcommons.dir/kmselement.c.o
+[ 30%] Building C object kms-core/src/gst-plugins/commons/CMakeFiles/kmsgstcommons.dir/kmsloop.c.o
+[ 30%] Building C object kms-core/src/gst-plugins/commons/CMakeFiles/kmsgstcommons.dir/kmsrecordingprofile.c.o
+[ 30%] Building C object kms-core/src/gst-plugins/commons/CMakeFiles/kmsgstcommons.dir/kmshubport.c.o
+[ 30%] Building C object kms-core/src/gst-plugins/commons/CMakeFiles/kmsgstcommons.dir/kmsbasehub.c.o
+[ 31%] Building C object kms-core/src/gst-plugins/commons/CMakeFiles/kmsgstcommons.dir/kmsuriendpoint.c.o
+[ 31%] Building C object kms-core/src/gst-plugins/commons/CMakeFiles/kmsgstcommons.dir/kmsbufferlacentymeta.c.o
+[ 31%] Building C object kms-core/src/gst-plugins/commons/CMakeFiles/kmsgstcommons.dir/kmsserializablemeta.c.o
+[ 31%] Building C object kms-core/src/gst-plugins/commons/CMakeFiles/kmsgstcommons.dir/kmsstats.c.o
+[ 31%] Building C object kms-core/src/gst-plugins/commons/CMakeFiles/kmsgstcommons.dir/kmstreebin.c.o
+[ 31%] Building C object kms-core/src/gst-plugins/commons/CMakeFiles/kmsgstcommons.dir/kmsdectreebin.c.o
+[ 32%] Building C object kms-core/src/gst-plugins/commons/CMakeFiles/kmsgstcommons.dir/kmsenctreebin.c.o
+[ 32%] Building C object kms-core/src/gst-plugins/commons/CMakeFiles/kmsgstcommons.dir/kmsparsetreebin.c.o
+[ 32%] Building C object kms-core/src/gst-plugins/commons/CMakeFiles/kmsgstcommons.dir/kmsrtppaytreebin.c.o
+[ 32%] Building C object kms-core/src/gst-plugins/commons/CMakeFiles/kmsgstcommons.dir/kmslist.c.o
+[ 32%] Building C object kms-core/src/gst-plugins/commons/CMakeFiles/kmsgstcommons.dir/kmsrtpsynchronizer.c.o
+[ 32%] Building C object kms-core/src/gst-plugins/commons/CMakeFiles/kmsgstcommons.dir/kms-core-enumtypes.c.o
+[ 34%] Building C object kms-core/src/gst-plugins/commons/CMakeFiles/kmsgstcommons.dir/kms-core-marshal.c.o
+[ 34%] Linking C shared library libkmsgstcommons.so
+[ 34%] Built target kmsgstcommons
+Scanning dependencies of target kmscoreplugins
+[ 34%] Building C object kms-core/src/gst-plugins/CMakeFiles/kmscoreplugins.dir/kmscore.c.o
+[ 34%] Building C object kms-core/src/gst-plugins/CMakeFiles/kmscoreplugins.dir/kmsagnosticbin.c.o
+[ 34%] Building C object kms-core/src/gst-plugins/CMakeFiles/kmscoreplugins.dir/kmsagnosticbin3.c.o
+[ 34%] Building C object kms-core/src/gst-plugins/CMakeFiles/kmscoreplugins.dir/kmsfilterelement.c.o
+[ 34%] Building C object kms-core/src/gst-plugins/CMakeFiles/kmscoreplugins.dir/kmsaudiomixer.c.o
+[ 35%] Building C object kms-core/src/gst-plugins/CMakeFiles/kmscoreplugins.dir/kmsaudiomixerbin.c.o
+[ 35%] Building C object kms-core/src/gst-plugins/CMakeFiles/kmscoreplugins.dir/kmsbitratefilter.c.o
+[ 35%] Building C object kms-core/src/gst-plugins/CMakeFiles/kmscoreplugins.dir/kmsbufferinjector.c.o
+[ 35%] Building C object kms-core/src/gst-plugins/CMakeFiles/kmscoreplugins.dir/kmspassthrough.c.o
+[ 35%] Building C object kms-core/src/gst-plugins/CMakeFiles/kmscoreplugins.dir/kmsdummysrc.c.o
+[ 35%] Building C object kms-core/src/gst-plugins/CMakeFiles/kmscoreplugins.dir/kmsdummysink.c.o
+[ 36%] Building C object kms-core/src/gst-plugins/CMakeFiles/kmscoreplugins.dir/kmsdummyduplex.c.o
+[ 36%] Building C object kms-core/src/gst-plugins/CMakeFiles/kmscoreplugins.dir/kmsdummysdp.c.o
+[ 36%] Building C object kms-core/src/gst-plugins/CMakeFiles/kmscoreplugins.dir/kmsdummyrtp.c.o
+[ 36%] Building C object kms-core/src/gst-plugins/CMakeFiles/kmscoreplugins.dir/kmsdummyuri.c.o
+[ 36%] Linking C shared module libkmscoreplugins.so
+[ 36%] Built target kmscoreplugins
+[ 37%] Generating cpp_server_internal.generated, implementation/generated-cpp/SerializerExpanderCore.cpp, implementation/generated-cpp/MediaObjectImplInternal.cpp, implementation/generated-cpp/ServerManagerImplInternal.cpp, implementation/generated-cpp/SessionEndpointImplInternal.cpp, implementation/generated-cpp/HubImplInternal.cpp, implementation/generated-cpp/FilterImplInternal.cpp, implementation/generated-cpp/EndpointImplInternal.cpp, implementation/generated-cpp/HubPortImplInternal.cpp, implementation/generated-cpp/PassThroughImplInternal.cpp, implementation/generated-cpp/UriEndpointImplInternal.cpp, implementation/generated-cpp/MediaPipelineImplInternal.cpp, implementation/generated-cpp/SdpEndpointImplInternal.cpp, implementation/generated-cpp/BaseRtpEndpointImplInternal.cpp, implementation/generated-cpp/MediaElementImplInternal.cpp, implementation/generated-cpp/MediaObjectImplFactory.hpp, implementation/generated-cpp/ServerManagerImplFactory.hpp, implementation/generated-cpp/SessionEndpointImplFactory.hpp, implementation/generated-cpp/HubImplFactory.hpp, implementation/generated-cpp/FilterImplFactory.hpp, implementation/generated-cpp/EndpointImplFactory.hpp, implementation/generated-cpp/HubPortImplFactory.hpp, implementation/generated-cpp/PassThroughImplFactory.hpp, implementation/generated-cpp/UriEndpointImplFactory.hpp, implementation/generated-cpp/MediaPipelineImplFactory.hpp, implementation/generated-cpp/SdpEndpointImplFactory.hpp, implementation/generated-cpp/BaseRtpEndpointImplFactory.hpp, implementation/generated-cpp/MediaElementImplFactory.hpp
+Generation success
+Scanning dependencies of target kmscoreimpl
+[ 37%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreimpl.dir/implementation/EventHandler.cpp.o
+[ 37%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreimpl.dir/implementation/Factory.cpp.o
+[ 37%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreimpl.dir/implementation/MediaSet.cpp.o
+[ 37%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreimpl.dir/implementation/ModuleManager.cpp.o
+[ 39%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreimpl.dir/implementation/WorkerPool.cpp.o
+[ 39%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreimpl.dir/implementation/UUIDGenerator.cpp.o
+[ 39%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreimpl.dir/implementation/RegisterParent.cpp.o
+[ 39%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreimpl.dir/implementation/DotGraph.cpp.o
+[ 39%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreimpl.dir/implementation/process-tools/linux-process.cpp.o
+[ 39%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreimpl.dir/implementation/objects/MediaObjectImpl.cpp.o
+[ 40%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreimpl.dir/implementation/objects/ServerManagerImpl.cpp.o
+[ 40%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreimpl.dir/implementation/objects/SessionEndpointImpl.cpp.o
+[ 40%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreimpl.dir/implementation/objects/HubImpl.cpp.o
+[ 40%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreimpl.dir/implementation/objects/FilterImpl.cpp.o
+[ 40%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreimpl.dir/implementation/objects/EndpointImpl.cpp.o
+[ 40%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreimpl.dir/implementation/objects/HubPortImpl.cpp.o
+[ 41%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreimpl.dir/implementation/objects/PassThroughImpl.cpp.o
+[ 41%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreimpl.dir/implementation/objects/UriEndpointImpl.cpp.o
+[ 41%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreimpl.dir/implementation/objects/MediaPipelineImpl.cpp.o
+[ 41%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreimpl.dir/implementation/objects/SdpEndpointImpl.cpp.o
+[ 41%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreimpl.dir/implementation/objects/BaseRtpEndpointImpl.cpp.o
+[ 42%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreimpl.dir/implementation/objects/MediaElementImpl.cpp.o
+[ 42%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreimpl.dir/implementation/generated-cpp/SerializerExpanderCore.cpp.o
+[ 42%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreimpl.dir/implementation/generated-cpp/MediaObjectImplInternal.cpp.o
+[ 42%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreimpl.dir/implementation/generated-cpp/ServerManagerImplInternal.cpp.o
+[ 42%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreimpl.dir/implementation/generated-cpp/SessionEndpointImplInternal.cpp.o
+[ 42%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreimpl.dir/implementation/generated-cpp/HubImplInternal.cpp.o
+[ 43%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreimpl.dir/implementation/generated-cpp/FilterImplInternal.cpp.o
+[ 43%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreimpl.dir/implementation/generated-cpp/EndpointImplInternal.cpp.o
+[ 43%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreimpl.dir/implementation/generated-cpp/HubPortImplInternal.cpp.o
+[ 43%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreimpl.dir/implementation/generated-cpp/PassThroughImplInternal.cpp.o
+[ 43%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreimpl.dir/implementation/generated-cpp/UriEndpointImplInternal.cpp.o
+[ 43%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreimpl.dir/implementation/generated-cpp/MediaPipelineImplInternal.cpp.o
+[ 45%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreimpl.dir/implementation/generated-cpp/SdpEndpointImplInternal.cpp.o
+[ 45%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreimpl.dir/implementation/generated-cpp/BaseRtpEndpointImplInternal.cpp.o
+[ 45%] Building CXX object kms-core/src/server/CMakeFiles/kmscoreimpl.dir/implementation/generated-cpp/MediaElementImplInternal.cpp.o
+[ 45%] Linking CXX shared library libkmscoreimpl.so
+[ 45%] Built target kmscoreimpl
+[ 45%] Generating core.kmd.json
+Generation success
+[ 45%] Generating cpp_module.generated, implementation/generated-cpp/Module.cpp
+Generation success
+Scanning dependencies of target kmscoremodule
+[ 46%] Building CXX object kms-core/src/server/CMakeFiles/kmscoremodule.dir/implementation/generated-cpp/Module.cpp.o
+[ 46%] Building CXX object kms-core/src/server/CMakeFiles/kmscoremodule.dir/module_version.cpp.o
+[ 46%] Building CXX object kms-core/src/server/CMakeFiles/kmscoremodule.dir/module_name.cpp.o
+[ 46%] Building CXX object kms-core/src/server/CMakeFiles/kmscoremodule.dir/module_descriptor.cpp.o
+[ 46%] Building CXX object kms-core/src/server/CMakeFiles/kmscoremodule.dir/module_generation_time.cpp.o
+/root/kms-omni-build/build-RelWithDebInfo/kms-core/src/server/module_generation_time.cpp:3:47: warning: macro "__DATE__" might prevent reproducible builds [-Wdate-time]
+     const char * getGenerationTime () {return __DATE__ " " __TIME__;}
+                                               ^~~~~~~~
+/root/kms-omni-build/build-RelWithDebInfo/kms-core/src/server/module_generation_time.cpp:3:60: warning: macro "__TIME__" might prevent reproducible builds [-Wdate-time]
+     const char * getGenerationTime () {return __DATE__ " " __TIME__;}
+                                                            ^~~~~~~~
+[ 47%] Linking CXX shared module libkmscoremodule.so
+[ 47%] Built target kmscoremodule
+Scanning dependencies of target vp8parse
+[ 47%] Building C object kms-core/src/gst-plugins/vp8parse/CMakeFiles/vp8parse.dir/vp8parse.c.o
+[ 47%] Building C object kms-core/src/gst-plugins/vp8parse/CMakeFiles/vp8parse.dir/kmsvp8parse.c.o
+[ 48%] Linking C shared module libvp8parse.so
+[ 48%] Built target vp8parse
+[ 48%] Generating cpp_interface.generated, interface/generated-cpp/PlayerEndpoint.cpp, interface/generated-cpp/WebRtcEndpoint.cpp, interface/generated-cpp/HttpPostEndpoint.cpp, interface/generated-cpp/HttpEndpoint.cpp, interface/generated-cpp/DispatcherOneToMany.cpp, interface/generated-cpp/Mixer.cpp, interface/generated-cpp/RtpEndpoint.cpp, interface/generated-cpp/Composite.cpp, interface/generated-cpp/RecorderEndpoint.cpp, interface/generated-cpp/Dispatcher.cpp, interface/generated-cpp/AlphaBlending.cpp, interface/generated-cpp/OnIceCandidate.cpp, interface/generated-cpp/IceCandidateFound.cpp, interface/generated-cpp/OnIceGatheringDone.cpp, interface/generated-cpp/IceGatheringDone.cpp, interface/generated-cpp/OnIceComponentStateChanged.cpp, interface/generated-cpp/IceComponentStateChange.cpp, interface/generated-cpp/OnDataChannelOpened.cpp, interface/generated-cpp/DataChannelOpen.cpp, interface/generated-cpp/OnDataChannelClosed.cpp, interface/generated-cpp/DataChannelClose.cpp, interface/generated-cpp/NewCandidatePairSelected.cpp, interface/generated-cpp/EndOfStream.cpp, interface/generated-cpp/OnKeySoftLimit.cpp, interface/generated-cpp/Recording.cpp, interface/generated-cpp/Paused.cpp, interface/generated-cpp/Stopped.cpp, interface/generated-cpp/VideoInfo.cpp, interface/generated-cpp/IceCandidate.cpp, interface/generated-cpp/IceComponentState.cpp, interface/generated-cpp/IceCandidatePair.cpp, interface/generated-cpp/IceConnection.cpp, interface/generated-cpp/CertificateKeyType.cpp, interface/generated-cpp/MediaProfileSpecType.cpp, interface/generated-cpp/CryptoSuite.cpp, interface/generated-cpp/SDES.cpp, interface/generated-cpp/PlayerEndpoint.hpp, interface/generated-cpp/WebRtcEndpoint.hpp, interface/generated-cpp/HttpPostEndpoint.hpp, interface/generated-cpp/HttpEndpoint.hpp, interface/generated-cpp/DispatcherOneToMany.hpp, interface/generated-cpp/Mixer.hpp, interface/generated-cpp/RtpEndpoint.hpp, interface/generated-cpp/Composite.hpp, interface/generated-cpp/RecorderEndpoint.hpp, interface/generated-cpp/Dispatcher.hpp, interface/generated-cpp/AlphaBlending.hpp, interface/generated-cpp/OnIceCandidate.hpp, interface/generated-cpp/IceCandidateFound.hpp, interface/generated-cpp/OnIceGatheringDone.hpp, interface/generated-cpp/IceGatheringDone.hpp, interface/generated-cpp/OnIceComponentStateChanged.hpp, interface/generated-cpp/IceComponentStateChange.hpp, interface/generated-cpp/OnDataChannelOpened.hpp, interface/generated-cpp/DataChannelOpen.hpp, interface/generated-cpp/OnDataChannelClosed.hpp, interface/generated-cpp/DataChannelClose.hpp, interface/generated-cpp/NewCandidatePairSelected.hpp, interface/generated-cpp/EndOfStream.hpp, interface/generated-cpp/OnKeySoftLimit.hpp, interface/generated-cpp/Recording.hpp, interface/generated-cpp/Paused.hpp, interface/generated-cpp/Stopped.hpp, interface/generated-cpp/VideoInfo.hpp, interface/generated-cpp/IceCandidate.hpp, interface/generated-cpp/IceComponentState.hpp, interface/generated-cpp/IceCandidatePair.hpp, interface/generated-cpp/IceConnection.hpp, interface/generated-cpp/CertificateKeyType.hpp, interface/generated-cpp/MediaProfileSpecType.hpp, interface/generated-cpp/CryptoSuite.hpp, interface/generated-cpp/SDES.hpp
+Generation success
+[ 48%] Generating cpp_interface_internal.generated, interface/generated-cpp/PlayerEndpointInternal.cpp, interface/generated-cpp/WebRtcEndpointInternal.cpp, interface/generated-cpp/HttpPostEndpointInternal.cpp, interface/generated-cpp/HttpEndpointInternal.cpp, interface/generated-cpp/DispatcherOneToManyInternal.cpp, interface/generated-cpp/MixerInternal.cpp, interface/generated-cpp/RtpEndpointInternal.cpp, interface/generated-cpp/CompositeInternal.cpp, interface/generated-cpp/RecorderEndpointInternal.cpp, interface/generated-cpp/DispatcherInternal.cpp, interface/generated-cpp/AlphaBlendingInternal.cpp, interface/generated-cpp/PlayerEndpointInternal.hpp, interface/generated-cpp/WebRtcEndpointInternal.hpp, interface/generated-cpp/HttpPostEndpointInternal.hpp, interface/generated-cpp/HttpEndpointInternal.hpp, interface/generated-cpp/DispatcherOneToManyInternal.hpp, interface/generated-cpp/MixerInternal.hpp, interface/generated-cpp/RtpEndpointInternal.hpp, interface/generated-cpp/CompositeInternal.hpp, interface/generated-cpp/RecorderEndpointInternal.hpp, interface/generated-cpp/DispatcherInternal.hpp, interface/generated-cpp/AlphaBlendingInternal.hpp
+Generation success
+Scanning dependencies of target kmselementsinterface
+[ 48%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsinterface.dir/interface/generated-cpp/PlayerEndpointInternal.cpp.o
+[ 50%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsinterface.dir/interface/generated-cpp/WebRtcEndpointInternal.cpp.o
+[ 50%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsinterface.dir/interface/generated-cpp/HttpPostEndpointInternal.cpp.o
+[ 50%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsinterface.dir/interface/generated-cpp/HttpEndpointInternal.cpp.o
+[ 50%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsinterface.dir/interface/generated-cpp/DispatcherOneToManyInternal.cpp.o
+[ 50%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsinterface.dir/interface/generated-cpp/MixerInternal.cpp.o
+[ 50%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsinterface.dir/interface/generated-cpp/RtpEndpointInternal.cpp.o
+[ 51%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsinterface.dir/interface/generated-cpp/CompositeInternal.cpp.o
+[ 51%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsinterface.dir/interface/generated-cpp/RecorderEndpointInternal.cpp.o
+[ 51%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsinterface.dir/interface/generated-cpp/DispatcherInternal.cpp.o
+[ 51%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsinterface.dir/interface/generated-cpp/AlphaBlendingInternal.cpp.o
+[ 51%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsinterface.dir/interface/generated-cpp/PlayerEndpoint.cpp.o
+[ 52%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsinterface.dir/interface/generated-cpp/WebRtcEndpoint.cpp.o
+[ 52%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsinterface.dir/interface/generated-cpp/HttpPostEndpoint.cpp.o
+[ 52%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsinterface.dir/interface/generated-cpp/HttpEndpoint.cpp.o
+[ 52%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsinterface.dir/interface/generated-cpp/DispatcherOneToMany.cpp.o
+[ 52%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsinterface.dir/interface/generated-cpp/Mixer.cpp.o
+[ 52%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsinterface.dir/interface/generated-cpp/RtpEndpoint.cpp.o
+[ 53%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsinterface.dir/interface/generated-cpp/Composite.cpp.o
+[ 53%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsinterface.dir/interface/generated-cpp/RecorderEndpoint.cpp.o
+[ 53%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsinterface.dir/interface/generated-cpp/Dispatcher.cpp.o
+[ 53%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsinterface.dir/interface/generated-cpp/AlphaBlending.cpp.o
+[ 53%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsinterface.dir/interface/generated-cpp/OnIceCandidate.cpp.o
+[ 53%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsinterface.dir/interface/generated-cpp/IceCandidateFound.cpp.o
+[ 54%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsinterface.dir/interface/generated-cpp/OnIceGatheringDone.cpp.o
+[ 54%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsinterface.dir/interface/generated-cpp/IceGatheringDone.cpp.o
+[ 54%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsinterface.dir/interface/generated-cpp/OnIceComponentStateChanged.cpp.o
+[ 54%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsinterface.dir/interface/generated-cpp/IceComponentStateChange.cpp.o
+[ 54%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsinterface.dir/interface/generated-cpp/OnDataChannelOpened.cpp.o
+[ 56%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsinterface.dir/interface/generated-cpp/DataChannelOpen.cpp.o
+[ 56%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsinterface.dir/interface/generated-cpp/OnDataChannelClosed.cpp.o
+[ 56%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsinterface.dir/interface/generated-cpp/DataChannelClose.cpp.o
+[ 56%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsinterface.dir/interface/generated-cpp/NewCandidatePairSelected.cpp.o
+[ 56%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsinterface.dir/interface/generated-cpp/EndOfStream.cpp.o
+[ 56%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsinterface.dir/interface/generated-cpp/OnKeySoftLimit.cpp.o
+[ 57%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsinterface.dir/interface/generated-cpp/Recording.cpp.o
+[ 57%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsinterface.dir/interface/generated-cpp/Paused.cpp.o
+[ 57%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsinterface.dir/interface/generated-cpp/Stopped.cpp.o
+[ 57%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsinterface.dir/interface/generated-cpp/VideoInfo.cpp.o
+[ 57%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsinterface.dir/interface/generated-cpp/IceCandidate.cpp.o
+[ 57%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsinterface.dir/interface/generated-cpp/IceComponentState.cpp.o
+[ 58%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsinterface.dir/interface/generated-cpp/IceCandidatePair.cpp.o
+[ 58%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsinterface.dir/interface/generated-cpp/IceConnection.cpp.o
+[ 58%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsinterface.dir/interface/generated-cpp/CertificateKeyType.cpp.o
+[ 58%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsinterface.dir/interface/generated-cpp/MediaProfileSpecType.cpp.o
+[ 58%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsinterface.dir/interface/generated-cpp/CryptoSuite.cpp.o
+[ 59%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsinterface.dir/interface/generated-cpp/SDES.cpp.o
+[ 59%] Linking CXX static library libkmselementsinterface.a
+[ 59%] Built target kmselementsinterface
+[ 59%] Generating kms-webrtc-data-marshal.h
+INFO: Reading /root/kms-omni-build/kms-elements/src/gst-plugins/webrtcendpoint/kms-webrtc-data-marshal.list...
+[ 59%] Generating kms-webrtc-enumtypes.h
+[ 59%] Generating kms-webrtc-enumtypes.c
+[ 59%] Generating kms-webrtc-data-marshal.c
+INFO: Reading /root/kms-omni-build/kms-elements/src/gst-plugins/webrtcendpoint/kms-webrtc-data-marshal.list...
+Scanning dependencies of target webrtcdataproto
+[ 59%] Building C object kms-elements/src/gst-plugins/webrtcendpoint/CMakeFiles/webrtcdataproto.dir/kmswebrtcdatasessionbin.c.o
+[ 60%] Building C object kms-elements/src/gst-plugins/webrtcendpoint/CMakeFiles/webrtcdataproto.dir/kmswebrtcdatachannelbin.c.o
+[ 60%] Building C object kms-elements/src/gst-plugins/webrtcendpoint/CMakeFiles/webrtcdataproto.dir/kmswebrtcdatachannel.c.o
+[ 60%] Building C object kms-elements/src/gst-plugins/webrtcendpoint/CMakeFiles/webrtcdataproto.dir/kms-webrtc-enumtypes.c.o
+[ 60%] Building C object kms-elements/src/gst-plugins/webrtcendpoint/CMakeFiles/webrtcdataproto.dir/kms-webrtc-data-marshal.c.o
+[ 60%] Linking C shared library libwebrtcdataproto.so
+[ 60%] Built target webrtcdataproto
+[ 62%] Generating kms-marshal.h
+INFO: Reading /root/kms-omni-build/kms-elements/src/gst-plugins/rtcpdemux/kms-marshal.list...
+[ 62%] Generating kms-marshal.c
+INFO: Reading /root/kms-omni-build/kms-elements/src/gst-plugins/rtcpdemux/kms-marshal.list...
+Scanning dependencies of target rtcpdemux
+[ 62%] Building C object kms-elements/src/gst-plugins/rtcpdemux/CMakeFiles/rtcpdemux.dir/rtcpdemux.c.o
+[ 62%] Building C object kms-elements/src/gst-plugins/rtcpdemux/CMakeFiles/rtcpdemux.dir/kmsrtcpdemux.c.o
+[ 62%] Building C object kms-elements/src/gst-plugins/rtcpdemux/CMakeFiles/rtcpdemux.dir/kms-marshal.c.o
+[ 62%] Linking C shared module librtcpdemux.so
+[ 62%] Built target rtcpdemux
+[ 62%] Generating kms-webrtc-marshal.h
+INFO: Reading /root/kms-omni-build/kms-elements/src/gst-plugins/webrtcendpoint/kms-webrtc-marshal.list...
+[ 62%] Generating kms-webrtc-marshal.c
+INFO: Reading /root/kms-omni-build/kms-elements/src/gst-plugins/webrtcendpoint/kms-webrtc-marshal.list...
+Scanning dependencies of target kmswebrtcendpointlib
+[ 62%] Building C object kms-elements/src/gst-plugins/webrtcendpoint/CMakeFiles/kmswebrtcendpointlib.dir/kmswebrtcbaseconnection.c.o
+[ 63%] Building C object kms-elements/src/gst-plugins/webrtcendpoint/CMakeFiles/kmswebrtcendpointlib.dir/kmswebrtcconnection.c.o
+[ 63%] Building C object kms-elements/src/gst-plugins/webrtcendpoint/CMakeFiles/kmswebrtcendpointlib.dir/kmswebrtcrtcpmuxconnection.c.o
+[ 63%] Building C object kms-elements/src/gst-plugins/webrtcendpoint/CMakeFiles/kmswebrtcendpointlib.dir/kmswebrtcbundleconnection.c.o
+[ 63%] Building C object kms-elements/src/gst-plugins/webrtcendpoint/CMakeFiles/kmswebrtcendpointlib.dir/kmswebrtcsctpconnection.c.o
+[ 63%] Building C object kms-elements/src/gst-plugins/webrtcendpoint/CMakeFiles/kmswebrtcendpointlib.dir/kmswebrtctransportsrcnice.c.o
+[ 64%] Building C object kms-elements/src/gst-plugins/webrtcendpoint/CMakeFiles/kmswebrtcendpointlib.dir/kmswebrtctransportsinknice.c.o
+[ 64%] Building C object kms-elements/src/gst-plugins/webrtcendpoint/CMakeFiles/kmswebrtcendpointlib.dir/kmswebrtctransportsrc.c.o
+[ 64%] Building C object kms-elements/src/gst-plugins/webrtcendpoint/CMakeFiles/kmswebrtcendpointlib.dir/kmswebrtctransportsink.c.o
+[ 64%] Building C object kms-elements/src/gst-plugins/webrtcendpoint/CMakeFiles/kmswebrtcendpointlib.dir/kmswebrtctransport.c.o
+[ 64%] Building C object kms-elements/src/gst-plugins/webrtcendpoint/CMakeFiles/kmswebrtcendpointlib.dir/kmswebrtcsession.c.o
+[ 64%] Building C object kms-elements/src/gst-plugins/webrtcendpoint/CMakeFiles/kmswebrtcendpointlib.dir/kmswebrtcendpoint.c.o
+[ 65%] Building C object kms-elements/src/gst-plugins/webrtcendpoint/CMakeFiles/kmswebrtcendpointlib.dir/kmsicecandidate.c.o
+[ 65%] Building C object kms-elements/src/gst-plugins/webrtcendpoint/CMakeFiles/kmswebrtcendpointlib.dir/kmsicebaseagent.c.o
+[ 65%] Building C object kms-elements/src/gst-plugins/webrtcendpoint/CMakeFiles/kmswebrtcendpointlib.dir/kmsiceniceagent.c.o
+[ 65%] Building C object kms-elements/src/gst-plugins/webrtcendpoint/CMakeFiles/kmswebrtcendpointlib.dir/kms-webrtc-marshal.c.o
+[ 65%] Linking C shared library libkmswebrtcendpointlib.so
+[ 65%] Built target kmswebrtcendpointlib
+[ 67%] Generating http-enumtypes.h
+[ 67%] Generating http-marshal.h
+INFO: Reading /root/kms-omni-build/kms-elements/src/server/implementation/HttpServer/http-marshal.list...
+[ 67%] Generating http-marshal.c
+INFO: Reading /root/kms-omni-build/kms-elements/src/server/implementation/HttpServer/http-marshal.list...
+[ 67%] Generating http-enumtypes.c
+Scanning dependencies of target kmshttpep
+[ 67%] Building CXX object kms-elements/src/server/implementation/HttpServer/CMakeFiles/kmshttpep.dir/KmsHttpEPServer.cpp.o
+[ 67%] Building CXX object kms-elements/src/server/implementation/HttpServer/CMakeFiles/kmshttpep.dir/KmsHttpPost.cpp.o
+[ 67%] Building CXX object kms-elements/src/server/implementation/HttpServer/CMakeFiles/kmshttpep.dir/HttpEndPointServer.cpp.o
+[ 67%] Building C object kms-elements/src/server/implementation/HttpServer/CMakeFiles/kmshttpep.dir/http-marshal.c.o
+[ 67%] Building C object kms-elements/src/server/implementation/HttpServer/CMakeFiles/kmshttpep.dir/http-enumtypes.c.o
+[ 68%] Linking CXX static library libkmshttpep.a
+[ 68%] Built target kmshttpep
+[ 68%] Generating cpp_server_internal.generated, implementation/generated-cpp/SerializerExpanderElements.cpp, implementation/generated-cpp/PlayerEndpointImplInternal.cpp, implementation/generated-cpp/WebRtcEndpointImplInternal.cpp, implementation/generated-cpp/HttpPostEndpointImplInternal.cpp, implementation/generated-cpp/HttpEndpointImplInternal.cpp, implementation/generated-cpp/DispatcherOneToManyImplInternal.cpp, implementation/generated-cpp/MixerImplInternal.cpp, implementation/generated-cpp/RtpEndpointImplInternal.cpp, implementation/generated-cpp/CompositeImplInternal.cpp, implementation/generated-cpp/RecorderEndpointImplInternal.cpp, implementation/generated-cpp/DispatcherImplInternal.cpp, implementation/generated-cpp/AlphaBlendingImplInternal.cpp, implementation/generated-cpp/PlayerEndpointImplFactory.hpp, implementation/generated-cpp/WebRtcEndpointImplFactory.hpp, implementation/generated-cpp/HttpPostEndpointImplFactory.hpp, implementation/generated-cpp/HttpEndpointImplFactory.hpp, implementation/generated-cpp/DispatcherOneToManyImplFactory.hpp, implementation/generated-cpp/MixerImplFactory.hpp, implementation/generated-cpp/RtpEndpointImplFactory.hpp, implementation/generated-cpp/CompositeImplFactory.hpp, implementation/generated-cpp/RecorderEndpointImplFactory.hpp, implementation/generated-cpp/DispatcherImplFactory.hpp, implementation/generated-cpp/AlphaBlendingImplFactory.hpp
+Generation success
+Scanning dependencies of target kmselementsimpl
+[ 69%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsimpl.dir/implementation/CertificateManager.cpp.o
+[ 69%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsimpl.dir/implementation/objects/PlayerEndpointImpl.cpp.o
+[ 69%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsimpl.dir/implementation/objects/WebRtcEndpointImpl.cpp.o
+[ 69%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsimpl.dir/implementation/objects/HttpPostEndpointImpl.cpp.o
+[ 69%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsimpl.dir/implementation/objects/HttpEndpointImpl.cpp.o
+[ 70%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsimpl.dir/implementation/objects/DispatcherOneToManyImpl.cpp.o
+[ 70%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsimpl.dir/implementation/objects/MixerImpl.cpp.o
+[ 70%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsimpl.dir/implementation/objects/RtpEndpointImpl.cpp.o
+[ 70%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsimpl.dir/implementation/objects/CompositeImpl.cpp.o
+[ 70%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsimpl.dir/implementation/objects/RecorderEndpointImpl.cpp.o
+[ 70%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsimpl.dir/implementation/objects/DispatcherImpl.cpp.o
+[ 71%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsimpl.dir/implementation/objects/AlphaBlendingImpl.cpp.o
+[ 71%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsimpl.dir/implementation/generated-cpp/SerializerExpanderElements.cpp.o
+[ 71%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsimpl.dir/implementation/generated-cpp/PlayerEndpointImplInternal.cpp.o
+[ 71%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsimpl.dir/implementation/generated-cpp/WebRtcEndpointImplInternal.cpp.o
+[ 71%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsimpl.dir/implementation/generated-cpp/HttpPostEndpointImplInternal.cpp.o
+[ 71%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsimpl.dir/implementation/generated-cpp/HttpEndpointImplInternal.cpp.o
+[ 73%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsimpl.dir/implementation/generated-cpp/DispatcherOneToManyImplInternal.cpp.o
+[ 73%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsimpl.dir/implementation/generated-cpp/MixerImplInternal.cpp.o
+[ 73%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsimpl.dir/implementation/generated-cpp/RtpEndpointImplInternal.cpp.o
+[ 73%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsimpl.dir/implementation/generated-cpp/CompositeImplInternal.cpp.o
+[ 73%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsimpl.dir/implementation/generated-cpp/RecorderEndpointImplInternal.cpp.o
+[ 74%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsimpl.dir/implementation/generated-cpp/DispatcherImplInternal.cpp.o
+[ 74%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsimpl.dir/implementation/generated-cpp/AlphaBlendingImplInternal.cpp.o
+[ 74%] Linking CXX shared library libkmselementsimpl.so
+[ 74%] Built target kmselementsimpl
+[ 74%] Generating elements.kmd.json
+Generation success
+[ 74%] Generating cpp_module.generated, implementation/generated-cpp/Module.cpp
+Generation success
+Scanning dependencies of target kmselementsmodule
+[ 74%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsmodule.dir/implementation/generated-cpp/Module.cpp.o
+[ 74%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsmodule.dir/module_version.cpp.o
+[ 75%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsmodule.dir/module_name.cpp.o
+[ 75%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsmodule.dir/module_descriptor.cpp.o
+[ 75%] Building CXX object kms-elements/src/server/CMakeFiles/kmselementsmodule.dir/module_generation_time.cpp.o
+/root/kms-omni-build/build-RelWithDebInfo/kms-elements/src/server/module_generation_time.cpp:3:47: warning: macro "__DATE__" might prevent reproducible builds [-Wdate-time]
+     const char * getGenerationTime () {return __DATE__ " " __TIME__;}
+                                               ^~~~~~~~
+/root/kms-omni-build/build-RelWithDebInfo/kms-elements/src/server/module_generation_time.cpp:3:60: warning: macro "__TIME__" might prevent reproducible builds [-Wdate-time]
+     const char * getGenerationTime () {return __DATE__ " " __TIME__;}
+                                                            ^~~~~~~~
+[ 75%] Linking CXX shared module libkmselementsmodule.so
+[ 75%] Built target kmselementsmodule
+Scanning dependencies of target recorderendpoint
+[ 75%] Building C object kms-elements/src/gst-plugins/recorderendpoint/CMakeFiles/recorderendpoint.dir/kmsbasemediamuxer.c.o
+[ 76%] Building C object kms-elements/src/gst-plugins/recorderendpoint/CMakeFiles/recorderendpoint.dir/kmsavmuxer.c.o
+[ 76%] Building C object kms-elements/src/gst-plugins/recorderendpoint/CMakeFiles/recorderendpoint.dir/kmsksrmuxer.c.o
+[ 76%] Building C object kms-elements/src/gst-plugins/recorderendpoint/CMakeFiles/recorderendpoint.dir/kmsrecorderendpoint.c.o
+[ 76%] Linking C shared module librecorderendpoint.so
+[ 76%] Built target recorderendpoint
+[ 78%] Generating kms-rtp-enumtypes.h
+[ 78%] Generating kms-rtp-enumtypes.c
+Scanning dependencies of target rtpendpoint
+[ 78%] Building C object kms-elements/src/gst-plugins/rtpendpoint/CMakeFiles/rtpendpoint.dir/kmsrtpbaseconnection.c.o
+[ 78%] Building C object kms-elements/src/gst-plugins/rtpendpoint/CMakeFiles/rtpendpoint.dir/kmsrtpconnection.c.o
+[ 78%] Building C object kms-elements/src/gst-plugins/rtpendpoint/CMakeFiles/rtpendpoint.dir/kmssrtpconnection.c.o
+[ 78%] Building C object kms-elements/src/gst-plugins/rtpendpoint/CMakeFiles/rtpendpoint.dir/kmsrtpsession.c.o
+[ 78%] Building C object kms-elements/src/gst-plugins/rtpendpoint/CMakeFiles/rtpendpoint.dir/kmssrtpsession.c.o
+[ 79%] Building C object kms-elements/src/gst-plugins/rtpendpoint/CMakeFiles/rtpendpoint.dir/kmsrtpendpoint.c.o
+[ 79%] Building C object kms-elements/src/gst-plugins/rtpendpoint/CMakeFiles/rtpendpoint.dir/kmssocketutils.c.o
+[ 79%] Building C object kms-elements/src/gst-plugins/rtpendpoint/CMakeFiles/rtpendpoint.dir/kmsrandom.c.o
+[ 79%] Building C object kms-elements/src/gst-plugins/rtpendpoint/CMakeFiles/rtpendpoint.dir/kms-rtp-enumtypes.c.o
+[ 79%] Linking C shared module librtpendpoint.so
+[ 79%] Built target rtpendpoint
+Scanning dependencies of target webrtcendpoint
+[ 79%] Building C object kms-elements/src/gst-plugins/webrtcendpoint/CMakeFiles/webrtcendpoint.dir/kmswebrtc.c.o
+[ 80%] Linking C shared module libwebrtcendpoint.so
+[ 80%] Built target webrtcendpoint
+[ 80%] Generating kms-elements-enumtypes.h
+[ 81%] Generating kms-elements-marshal.h
+INFO: Reading /root/kms-omni-build/kms-elements/src/gst-plugins/kms-elements-marshal.list...
+[ 81%] Generating kms-elements-marshal.c
+INFO: Reading /root/kms-omni-build/kms-elements/src/gst-plugins/kms-elements-marshal.list...
+[ 81%] Generating kms-elements-enumtypes.c
+Scanning dependencies of target kmselementsplugins
+[ 81%] Building C object kms-elements/src/gst-plugins/CMakeFiles/kmselementsplugins.dir/kmselements.c.o
+[ 81%] Building C object kms-elements/src/gst-plugins/CMakeFiles/kmselementsplugins.dir/kmshttpendpoint.c.o
+[ 81%] Building C object kms-elements/src/gst-plugins/CMakeFiles/kmselementsplugins.dir/kmshttppostendpoint.c.o
+[ 81%] Building C object kms-elements/src/gst-plugins/CMakeFiles/kmselementsplugins.dir/kmsplayerendpoint.c.o
+[ 82%] Building C object kms-elements/src/gst-plugins/CMakeFiles/kmselementsplugins.dir/kmsselectablemixer.c.o
+[ 82%] Building C object kms-elements/src/gst-plugins/CMakeFiles/kmselementsplugins.dir/kmsdispatcher.c.o
+[ 82%] Building C object kms-elements/src/gst-plugins/CMakeFiles/kmselementsplugins.dir/kmsdispatcheronetomany.c.o
+[ 82%] Building C object kms-elements/src/gst-plugins/CMakeFiles/kmselementsplugins.dir/kmscompositemixer.c.o
+[ 82%] Building C object kms-elements/src/gst-plugins/CMakeFiles/kmselementsplugins.dir/kmsalphablending.c.o
+[ 84%] Building C object kms-elements/src/gst-plugins/CMakeFiles/kmselementsplugins.dir/kms-elements-marshal.c.o
+[ 84%] Building C object kms-elements/src/gst-plugins/CMakeFiles/kmselementsplugins.dir/kms-elements-enumtypes.c.o
+[ 84%] Linking C shared module libkmselementsplugins.so
+[ 84%] Built target kmselementsplugins
+Scanning dependencies of target kmstestutils
+[ 84%] Building C object kms-elements/tests/check/CMakeFiles/kmstestutils.dir/kmstestutils.c.o
+[ 85%] Linking C static library libkmstestutils.a
+[ 85%] Built target kmstestutils
+[ 86%] Generating cpp_interface.generated, interface/generated-cpp/ImageOverlayFilter.cpp, interface/generated-cpp/GStreamerFilter.cpp, interface/generated-cpp/OpenCVFilter.cpp, interface/generated-cpp/ZBarFilter.cpp, interface/generated-cpp/FaceOverlayFilter.cpp, interface/generated-cpp/CodeFound.cpp, interface/generated-cpp/ImageOverlayFilter.hpp, interface/generated-cpp/GStreamerFilter.hpp, interface/generated-cpp/OpenCVFilter.hpp, interface/generated-cpp/ZBarFilter.hpp, interface/generated-cpp/FaceOverlayFilter.hpp, interface/generated-cpp/CodeFound.hpp
+Generation success
+[ 86%] Generating cpp_interface_internal.generated, interface/generated-cpp/ImageOverlayFilterInternal.cpp, interface/generated-cpp/GStreamerFilterInternal.cpp, interface/generated-cpp/OpenCVFilterInternal.cpp, interface/generated-cpp/ZBarFilterInternal.cpp, interface/generated-cpp/FaceOverlayFilterInternal.cpp, interface/generated-cpp/ImageOverlayFilterInternal.hpp, interface/generated-cpp/GStreamerFilterInternal.hpp, interface/generated-cpp/OpenCVFilterInternal.hpp, interface/generated-cpp/ZBarFilterInternal.hpp, interface/generated-cpp/FaceOverlayFilterInternal.hpp
+Generation success
+Scanning dependencies of target kmsfiltersinterface
+[ 86%] Building CXX object kms-filters/src/server/CMakeFiles/kmsfiltersinterface.dir/interface/generated-cpp/ImageOverlayFilterInternal.cpp.o
+[ 86%] Building CXX object kms-filters/src/server/CMakeFiles/kmsfiltersinterface.dir/interface/generated-cpp/GStreamerFilterInternal.cpp.o
+[ 86%] Building CXX object kms-filters/src/server/CMakeFiles/kmsfiltersinterface.dir/interface/generated-cpp/OpenCVFilterInternal.cpp.o
+[ 86%] Building CXX object kms-filters/src/server/CMakeFiles/kmsfiltersinterface.dir/interface/generated-cpp/ZBarFilterInternal.cpp.o
+[ 86%] Building CXX object kms-filters/src/server/CMakeFiles/kmsfiltersinterface.dir/interface/generated-cpp/FaceOverlayFilterInternal.cpp.o
+[ 87%] Building CXX object kms-filters/src/server/CMakeFiles/kmsfiltersinterface.dir/interface/generated-cpp/ImageOverlayFilter.cpp.o
+[ 87%] Building CXX object kms-filters/src/server/CMakeFiles/kmsfiltersinterface.dir/interface/generated-cpp/GStreamerFilter.cpp.o
+[ 87%] Building CXX object kms-filters/src/server/CMakeFiles/kmsfiltersinterface.dir/interface/generated-cpp/OpenCVFilter.cpp.o
+[ 87%] Building CXX object kms-filters/src/server/CMakeFiles/kmsfiltersinterface.dir/interface/generated-cpp/ZBarFilter.cpp.o
+[ 87%] Building CXX object kms-filters/src/server/CMakeFiles/kmsfiltersinterface.dir/interface/generated-cpp/FaceOverlayFilter.cpp.o
+[ 87%] Building CXX object kms-filters/src/server/CMakeFiles/kmsfiltersinterface.dir/interface/generated-cpp/CodeFound.cpp.o
+[ 89%] Linking CXX static library libkmsfiltersinterface.a
+[ 89%] Built target kmsfiltersinterface
+[ 89%] Generating cpp_server_internal.generated, implementation/generated-cpp/SerializerExpanderFilters.cpp, implementation/generated-cpp/ImageOverlayFilterImplInternal.cpp, implementation/generated-cpp/GStreamerFilterImplInternal.cpp, implementation/generated-cpp/OpenCVFilterImplInternal.cpp, implementation/generated-cpp/ZBarFilterImplInternal.cpp, implementation/generated-cpp/FaceOverlayFilterImplInternal.cpp, implementation/generated-cpp/ImageOverlayFilterImplFactory.hpp, implementation/generated-cpp/GStreamerFilterImplFactory.hpp, implementation/generated-cpp/OpenCVFilterImplFactory.hpp, implementation/generated-cpp/ZBarFilterImplFactory.hpp, implementation/generated-cpp/FaceOverlayFilterImplFactory.hpp
+Generation success
+Scanning dependencies of target kmsfiltersimpl
+[ 89%] Building CXX object kms-filters/src/server/CMakeFiles/kmsfiltersimpl.dir/implementation/objects/ImageOverlayFilterImpl.cpp.o
+[ 89%] Building CXX object kms-filters/src/server/CMakeFiles/kmsfiltersimpl.dir/implementation/objects/GStreamerFilterImpl.cpp.o
+[ 90%] Building CXX object kms-filters/src/server/CMakeFiles/kmsfiltersimpl.dir/implementation/objects/OpenCVFilterImpl.cpp.o
+[ 90%] Building CXX object kms-filters/src/server/CMakeFiles/kmsfiltersimpl.dir/implementation/objects/ZBarFilterImpl.cpp.o
+[ 90%] Building CXX object kms-filters/src/server/CMakeFiles/kmsfiltersimpl.dir/implementation/objects/FaceOverlayFilterImpl.cpp.o
+[ 90%] Building CXX object kms-filters/src/server/CMakeFiles/kmsfiltersimpl.dir/implementation/generated-cpp/SerializerExpanderFilters.cpp.o
+[ 90%] Building CXX object kms-filters/src/server/CMakeFiles/kmsfiltersimpl.dir/implementation/generated-cpp/ImageOverlayFilterImplInternal.cpp.o
+[ 90%] Building CXX object kms-filters/src/server/CMakeFiles/kmsfiltersimpl.dir/implementation/generated-cpp/GStreamerFilterImplInternal.cpp.o
+[ 91%] Building CXX object kms-filters/src/server/CMakeFiles/kmsfiltersimpl.dir/implementation/generated-cpp/OpenCVFilterImplInternal.cpp.o
+[ 91%] Building CXX object kms-filters/src/server/CMakeFiles/kmsfiltersimpl.dir/implementation/generated-cpp/ZBarFilterImplInternal.cpp.o
+[ 91%] Building CXX object kms-filters/src/server/CMakeFiles/kmsfiltersimpl.dir/implementation/generated-cpp/FaceOverlayFilterImplInternal.cpp.o
+[ 91%] Linking CXX shared library libkmsfiltersimpl.so
+[ 91%] Built target kmsfiltersimpl
+[ 91%] Generating filters.kmd.json
+Generation success
+[ 91%] Generating cpp_module.generated, implementation/generated-cpp/Module.cpp
+Generation success
+Scanning dependencies of target kmsfiltersmodule
+[ 91%] Building CXX object kms-filters/src/server/CMakeFiles/kmsfiltersmodule.dir/implementation/generated-cpp/Module.cpp.o
+[ 91%] Building CXX object kms-filters/src/server/CMakeFiles/kmsfiltersmodule.dir/module_version.cpp.o
+[ 92%] Building CXX object kms-filters/src/server/CMakeFiles/kmsfiltersmodule.dir/module_name.cpp.o
+[ 92%] Building CXX object kms-filters/src/server/CMakeFiles/kmsfiltersmodule.dir/module_descriptor.cpp.o
+[ 92%] Building CXX object kms-filters/src/server/CMakeFiles/kmsfiltersmodule.dir/module_generation_time.cpp.o
+/root/kms-omni-build/build-RelWithDebInfo/kms-filters/src/server/module_generation_time.cpp:3:47: warning: macro "__DATE__" might prevent reproducible builds [-Wdate-time]
+     const char * getGenerationTime () {return __DATE__ " " __TIME__;}
+                                               ^~~~~~~~
+/root/kms-omni-build/build-RelWithDebInfo/kms-filters/src/server/module_generation_time.cpp:3:60: warning: macro "__TIME__" might prevent reproducible builds [-Wdate-time]
+     const char * getGenerationTime () {return __DATE__ " " __TIME__;}
+                                                            ^~~~~~~~
+[ 92%] Linking CXX shared module libkmsfiltersmodule.so
+[ 92%] Built target kmsfiltersmodule
+Scanning dependencies of target facedetector
+[ 92%] Building C object kms-filters/src/gst-plugins/facedetector/CMakeFiles/facedetector.dir/facedetector.c.o
+[ 92%] Building C object kms-filters/src/gst-plugins/facedetector/CMakeFiles/facedetector.dir/kmsfacedetector.c.o
+[ 92%] Building CXX object kms-filters/src/gst-plugins/facedetector/CMakeFiles/facedetector.dir/classifier.cpp.o
+[ 93%] Linking CXX shared module libfacedetector.so
+[ 93%] Built target facedetector
+Scanning dependencies of target imageoverlay
+[ 93%] Building C object kms-filters/src/gst-plugins/imageoverlay/CMakeFiles/imageoverlay.dir/imageoverlay.c.o
+[ 93%] Building C object kms-filters/src/gst-plugins/imageoverlay/CMakeFiles/imageoverlay.dir/kmsimageoverlay.c.o
+[ 95%] Linking C shared module libimageoverlay.so
+[ 95%] Built target imageoverlay
+Scanning dependencies of target faceoverlay
+[ 95%] Building C object kms-filters/src/gst-plugins/faceoverlay/CMakeFiles/faceoverlay.dir/faceoverlay.c.o
+[ 95%] Building C object kms-filters/src/gst-plugins/faceoverlay/CMakeFiles/faceoverlay.dir/kmsfaceoverlay.c.o
+[ 95%] Linking C shared module libfaceoverlay.so
+[ 95%] Built target faceoverlay
+Scanning dependencies of target movementdetector
+[ 95%] Building C object kms-filters/src/gst-plugins/movementdetector/CMakeFiles/movementdetector.dir/movementdetector.c.o
+[ 96%] Building C object kms-filters/src/gst-plugins/movementdetector/CMakeFiles/movementdetector.dir/kmsmovementdetector.c.o
+[ 96%] Linking C shared module libmovementdetector.so
+[ 96%] Built target movementdetector
+Scanning dependencies of target opencvfilter
+[ 96%] Building C object kms-filters/src/gst-plugins/opencvfilter/CMakeFiles/opencvfilter.dir/opencvfilter.c.o
+[ 96%] Building CXX object kms-filters/src/gst-plugins/opencvfilter/CMakeFiles/opencvfilter.dir/kmsopencvfilter.cpp.o
+[ 96%] Linking CXX shared module libopencvfilter.so
+[ 96%] Built target opencvfilter
+Scanning dependencies of target logooverlay
+[ 96%] Building C object kms-filters/src/gst-plugins/logooverlay/CMakeFiles/logooverlay.dir/logooverlay.c.o
+[ 96%] Building C object kms-filters/src/gst-plugins/logooverlay/CMakeFiles/logooverlay.dir/kmslogooverlay.c.o
+[ 96%] Linking C shared module liblogooverlay.so
+[ 96%] Built target logooverlay
+Scanning dependencies of target kmsfilterstestutils
+[ 96%] Building C object kms-filters/tests/check/CMakeFiles/kmsfilterstestutils.dir/kmstestutils.c.o
+[ 96%] Linking C static library libkmsfilterstestutils.a
+[ 96%] Built target kmsfilterstestutils
+Scanning dependencies of target websocketTransport
+[ 96%] Building CXX object kurento-media-server/server/transport/websocket/CMakeFiles/websocketTransport.dir/WebSocketTransport.cpp.o
+[ 96%] Building CXX object kurento-media-server/server/transport/websocket/CMakeFiles/websocketTransport.dir/WebSocketTransportFactory.cpp.o
+[ 96%] Building CXX object kurento-media-server/server/transport/websocket/CMakeFiles/websocketTransport.dir/WebSocketEventHandler.cpp.o
+[ 96%] Building CXX object kurento-media-server/server/transport/websocket/CMakeFiles/websocketTransport.dir/WebSocketRegistrar.cpp.o
+[ 97%] Linking CXX static library libwebsocketTransport.a
+[ 97%] Built target websocketTransport
+Scanning dependencies of target transport
+[ 97%] Building CXX object kurento-media-server/server/transport/CMakeFiles/transport.dir/TransportFactory.cpp.o
+[ 97%] Linking CXX static library libtransport.a
+[ 97%] Built target transport
+Scanning dependencies of target kurento-media-server
+[ 97%] Building CXX object kurento-media-server/server/CMakeFiles/kurento-media-server.dir/main.cpp.o
+[ 98%] Building CXX object kurento-media-server/server/CMakeFiles/kurento-media-server.dir/version.cpp.o
+[ 98%] Building CXX object kurento-media-server/server/CMakeFiles/kurento-media-server.dir/ServerMethods.cpp.o
+[ 98%] Building CXX object kurento-media-server/server/CMakeFiles/kurento-media-server.dir/ResourceManager.cpp.o
+[ 98%] Building CXX object kurento-media-server/server/CMakeFiles/kurento-media-server.dir/RequestCache.cpp.o
+[ 98%] Building CXX object kurento-media-server/server/CMakeFiles/kurento-media-server.dir/CacheEntry.cpp.o
+[100%] Building CXX object kurento-media-server/server/CMakeFiles/kurento-media-server.dir/logging.cpp.o
+[100%] Building CXX object kurento-media-server/server/CMakeFiles/kurento-media-server.dir/modules.cpp.o
+[100%] Building CXX object kurento-media-server/server/CMakeFiles/kurento-media-server.dir/loadConfig.cpp.o
+[100%] Building CXX object kurento-media-server/server/CMakeFiles/kurento-media-server.dir/death_handler.cpp.o
+[100%] Linking CXX executable kurento-media-server
+[100%] Built target kurento-media-server
+[kms-build-run.sh] Run command:  GST_DEBUG='3,Kurento*:4,kms*:4,sdp*:4,webrtc*:4,*rtpendpoint:4,rtp*handler:4,rtpsynchronizer:4,agnosticbin:4'  kurento-media-server/server/kurento-media-server         --conf-file='/root/kms-omni-build/build-RelWithDebInfo/config/kurento.conf.json'         --modules-config-path='/root/kms-omni-build/build-RelWithDebInfo/config'         --modules-path='/root/kms-omni-build/build-RelWithDebInfo:/usr/lib/x86_64-linux-gnu/kurento/modules'         --gst-plugin-path='/root/kms-omni-build/build-RelWithDebInfo'
+0:00:00.514856275 [331m28416[00m 0x55b208dd58d0 [36mINFO   [00m [00mKurentoModuleManager ModuleManager.cpp:90:loadModule:[00m Load file: /root/kms-omni-build/build-RelWithDebInfo/kms-core/src/server/libkmscoremodule.so, module name: /root/kms-omni-build/build-RelWithDebInfo/kms-core/src/server/libkmscoremodule.so
+0:00:00.514952464 [331m28416[00m 0x55b208dd58d0 [36mINFO   [00m [00mKurentoModuleManager ModuleManager.cpp:137:loadModule:[00m Loaded module: core, version: 6.13.0, date: Jan  3 2020 08:57:12
+0:00:00.626154336 [331m28416[00m 0x55b208dd58d0 [36mINFO   [00m [00mKurentoModuleManager ModuleManager.cpp:90:loadModule:[00m Load file: /root/kms-omni-build/build-RelWithDebInfo/kms-filters/src/server/libkmsfiltersmodule.so, module name: /root/kms-omni-build/build-RelWithDebInfo/kms-filters/src/server/libkmsfiltersmodule.so
+0:00:00.626195766 [331m28416[00m 0x55b208dd58d0 [36mINFO   [00m [00mKurentoModuleManager ModuleManager.cpp:137:loadModule:[00m Loaded module: filters, version: 6.13.0, date: Jan  3 2020 09:00:48
+0:00:00.650370960 [331m28416[00m 0x55b208dd58d0 [36mINFO   [00m [00mKurentoModuleManager ModuleManager.cpp:90:loadModule:[00m Load file: /root/kms-omni-build/build-RelWithDebInfo/kms-elements/src/server/libkmselementsmodule.so, module name: /root/kms-omni-build/build-RelWithDebInfo/kms-elements/src/server/libkmselementsmodule.so
+0:00:00.650417406 [331m28416[00m 0x55b208dd58d0 [36mINFO   [00m [00mKurentoModuleManager ModuleManager.cpp:137:loadModule:[00m Loaded module: elements, version: 6.13.0, date: Jan  3 2020 08:59:44
+0:00:00.656994484 [331m28416[00m 0x55b208dd58d0 [36mINFO   [00m [00mKurentoModuleManager ModuleManager.cpp:162:loadModules:[00m Skip invalid path: /usr/local/lib/kurento/modules
+0:00:00.657119511 [331m28416[00m 0x55b208dd58d0 [36mINFO   [00m [00m  KurentoMediaServer main.cpp:240:main:[00m Kurento Media Server version: 6.13.0
+0:00:00.657135427 [331m28416[00m 0x55b208dd58d0 [36mINFO   [00m [00m   KurentoLoadConfig loadConfig.cpp:249:loadConfig:[00m Reading configuration from: /root/kms-omni-build/build-RelWithDebInfo/config/kurento.conf.json
+0:00:00.657983023 [331m28416[00m 0x55b208dd58d0 [36mINFO   [00m [00m   KurentoLoadConfig loadConfig.cpp:183:loadModulesConfigFromDir:[00m Looking for config files in /root/kms-omni-build/build-RelWithDebInfo/config
+0:00:00.658028420 [331m28416[00m 0x55b208dd58d0 [36mINFO   [00m [00m   KurentoLoadConfig loadConfig.cpp:183:loadModulesConfigFromDir:[00m Looking for config files in /root/kms-omni-build/build-RelWithDebInfo/config/kurento
+0:00:00.658493388 [331m28416[00m 0x55b208dd58d0 [36mINFO   [00m [00m   KurentoLoadConfig loadConfig.cpp:209:loadModulesConfigFromDir:[00m Loaded module config: /root/kms-omni-build/build-RelWithDebInfo/config/kurento/BaseRtpEndpoint.conf.ini
+0:00:00.659018734 [331m28416[00m 0x55b208dd58d0 [36mINFO   [00m [00m   KurentoLoadConfig loadConfig.cpp:209:loadModulesConfigFromDir:[00m Loaded module config: /root/kms-omni-build/build-RelWithDebInfo/config/kurento/SdpEndpoint.conf.json
+0:00:00.659558370 [331m28416[00m 0x55b208dd58d0 [36mINFO   [00m [00m   KurentoLoadConfig loadConfig.cpp:209:loadModulesConfigFromDir:[00m Loaded module config: /root/kms-omni-build/build-RelWithDebInfo/config/kurento/PlayerEndpoint.conf.ini
+0:00:00.660037276 [331m28416[00m 0x55b208dd58d0 [36mINFO   [00m [00m   KurentoLoadConfig loadConfig.cpp:209:loadModulesConfigFromDir:[00m Loaded module config: /root/kms-omni-build/build-RelWithDebInfo/config/kurento/MediaElement.conf.ini
+0:00:00.660506305 [331m28416[00m 0x55b208dd58d0 [36mINFO   [00m [00m   KurentoLoadConfig loadConfig.cpp:209:loadModulesConfigFromDir:[00m Loaded module config: /root/kms-omni-build/build-RelWithDebInfo/config/kurento/UriEndpoint.conf.ini
+0:00:00.660967967 [331m28416[00m 0x55b208dd58d0 [36mINFO   [00m [00m   KurentoLoadConfig loadConfig.cpp:209:loadModulesConfigFromDir:[00m Loaded module config: /root/kms-omni-build/build-RelWithDebInfo/config/kurento/WebRtcEndpoint.conf.ini
+0:00:00.661385677 [331m28416[00m 0x55b208dd58d0 [36mINFO   [00m [00m   KurentoLoadConfig loadConfig.cpp:209:loadModulesConfigFromDir:[00m Loaded module config: /root/kms-omni-build/build-RelWithDebInfo/config/kurento/HttpEndpoint.conf.ini
+0:00:00.661656877 [331m28416[00m 0x55b208dd58d0 [36mINFO   [00m [00m   KurentoLoadConfig loadConfig.cpp:209:loadModulesConfigFromDir:[00m Loaded module config: /root/kms-omni-build/build-RelWithDebInfo/config/kurento.conf.json
+0:00:00.661682237 [331m28416[00m 0x55b208dd58d0 [36mINFO   [00m [00m   KurentoLoadConfig loadConfig.cpp:265:loadConfig:[00m Configuration loaded successfully
+0:00:00.661751984 [331m28416[00m 0x55b208dd58d0 [36mINFO   [00m [00m   KurentoLoadConfig loadConfig.cpp:271:loadConfig:[00m Loaded config in effect:
+{
+    "mediaServer": {
+        "resources": {
+            "\/\/exceptionLimit": "0.8",
+            "\/\/killLimit": "0.7",
+            "garbageCollectorPeriod": "240",
+            "\/\/": "Whether to disable the RPC request cache, for memory constrained environments",
+            "disableRequestCache": "false"
+        },
+        "net": {
+            "websocket": {
+                "\/\/ipv6": "false",
+                "port": "8888",
+                "\/\/secure": {
+                    "\/\/port": "8433",
+                    "\/\/certificate": "defaultCertificate.pem",
+                    "\/\/password": ""
+                },
+                "\/\/registrar": {
+                    "\/\/address": "ws:\/\/localhost:9090",
+                    "\/\/localAddress": "localhost"
+                },
+                "\/\/": "Default SOMAXCONN (128)",
+                "\/\/connqueue": "128",
+                "path": "kurento",
+                "threads": "10"
+            }
+        }
+    },
+    "configPath": "\/root\/kms-omni-build\/build-RelWithDebInfo\/config",
+    "modules": {
+        "kurento": {
+            "BaseRtpEndpoint": {
+                "configPath": "\/root\/kms-omni-build\/build-RelWithDebInfo\/config\/kurento"
+            },
+            "SdpEndpoint": {
+                "numAudioMedias": "1",
+                "numVideoMedias": "1",
+                "audioCodecs": [
+                    {
+                        "name": "opus\/48000\/2",
+                        "\/\/": "Next is an example about how a codec can be configured.",
+                        "\/\/": "WARNING: Usage of properties is not yet supported",
+                        "\/\/properties": {
+                            "\/\/maxcodedaudiobandwidth": "16000",
+                            "\/\/maxaveragebitrate": "20000",
+                            "\/\/stereo": "1",
+                            "\/\/useinbandfec": "1",
+                            "\/\/usedtx": "0"
+                        }
+                    },
+                    {
+                        "name": "PCMU\/8000"
+                    },
+                    {
+                        "name": "AMR\/8000"
+                    }
+                ],
+                "videoCodecs": [
+                    {
+                        "name": "VP8\/90000"
+                    },
+                    {
+                        "name": "H264\/90000"
+                    }
+                ],
+                "configPath": "\/root\/kms-omni-build\/build-RelWithDebInfo\/config\/kurento"
+            },
+            "PlayerEndpoint": {
+                "configPath": "\/root\/kms-omni-build\/build-RelWithDebInfo\/config\/kurento"
+            },
+            "MediaElement": {
+                "configPath": "\/root\/kms-omni-build\/build-RelWithDebInfo\/config\/kurento"
+            },
+            "UriEndpoint": {
+                "defaultPath": "file:\/\/\/var\/lib\/kurento\/",
+                "configPath": "\/root\/kms-omni-build\/build-RelWithDebInfo\/config\/kurento"
+            },
+            "WebRtcEndpoint": {
+                "configPath": "\/root\/kms-omni-build\/build-RelWithDebInfo\/config\/kurento"
+            },
+            "HttpEndpoint": {
+                "serverAddress": "localhost",
+                "port": "9091",
+                "configPath": "\/root\/kms-omni-build\/build-RelWithDebInfo\/config\/kurento"
+            },
+            "mediaServer": {
+                "resources": {
+                    "\/\/exceptionLimit": "0.8",
+                    "\/\/killLimit": "0.7",
+                    "garbageCollectorPeriod": "240",
+                    "\/\/": "Whether to disable the RPC request cache, for memory constrained environments",
+                    "disableRequestCache": "false"
+                },
+                "net": {
+                    "websocket": {
+                        "\/\/ipv6": "false",
+                        "port": "8888",
+                        "\/\/secure": {
+                            "\/\/port": "8433",
+                            "\/\/certificate": "defaultCertificate.pem",
+                            "\/\/password": ""
+                        },
+                        "\/\/registrar": {
+                            "\/\/address": "ws:\/\/localhost:9090",
+                            "\/\/localAddress": "localhost"
+                        },
+                        "\/\/": "Default SOMAXCONN (128)",
+                        "\/\/connqueue": "128",
+                        "path": "kurento",
+                        "threads": "10"
+                    }
+                }
+            },
+            "configPath": "\/root\/kms-omni-build\/build-RelWithDebInfo\/config"
+        }
+    }
+}
+
+0:00:00.661841690 [331m28416[00m 0x55b208dd58d0 [36mINFO   [00m [00mKurentoServerMethods ServerMethods.cpp:90:ServerMethods:[00m Using above 80.00% of system limits will throw NOT_ENOUGH_RESOURCES exception
+0:00:00.661869412 [331m28416[00m 0x55b208dd58d0 [36mINFO   [00m [00mKurentoServerMethods ServerMethods.cpp:109:ServerMethods:[00m System limits: 7636 threads, 1024 files
+0:00:00.662357574 [331m28416[00m 0x55b208dd58d0 [36mINFO   [00m [00mKurentoServerMethods ServerMethods.cpp:144:ServerMethods:[00m RPC Request Cache is ENABLED
+0:00:00.662453006 [331m28416[00m 0x55b208dd58d0 [36mINFO   [00m [00mKurentoWebSocketTransport WebSocketTransport.cpp:152:WebSocketTransport:[00m WebSocket server listening on address '::', port 8888
+0:00:00.662464067 [331m28416[00m 0x55b208dd58d0 [36mINFO   [00m [00mKurentoWebSocketTransport WebSocketTransport.cpp:249:WebSocketTransport:[00m Secure websocket server not enabled
+0:00:00.662658396 [331m28416[00m 0x55b208dd58d0 [36mINFO   [00m [00m  KurentoMediaServer main.cpp:259:main:[00m Kurento Media Server started
+0:13:22.977103356 [331m28416[00m 0x55b208dd58d0 [36mINFO   [00m [00m     KurentoMediaSet MediaSet.cpp:111:deleteMediaSet:[00m Destroying mediaSet
+0:13:22.986600887 [331m28416[00m 0x55b208dd58d0 [36mINFO   [00m [00m  KurentoMediaServer main.cpp:266:main:[00m Kurento Media Server stopped
+~/kms-omni-build
+[kms-build-run.sh] SUCCESS
+[kms-build-run.sh] #################### END ####################
